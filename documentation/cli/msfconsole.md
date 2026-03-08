@@ -51,3 +51,14 @@ Target a set of IPv6 hosts:
 Target a block from a resolved domain name:
 
     set RHOSTS www.example.test/24
+### Automatic Resource Script: msfconsole.rc
+
+In addition to manual loading, Metasploit automatically executes a resource script named `msfconsole.rc` upon startup. This is located at `~/.msf4/msfconsole.rc` (Linux/macOS) or `%USERPROFILE%\.msf4\msfconsole.rc` (Windows). 
+
+This file is commonly used for global configurations such as:
+* `setg PromptTime true` - Adds a timestamp to your prompt.
+* `setg verbose true` - Enables detailed output by default.
+* `workspace <name>` - Sets a default project workspace.
+
+> [!NOTE]
+> If you need to skip the execution of this automatic script, launch the console with the `-y` flag: `msfconsole -y`.
