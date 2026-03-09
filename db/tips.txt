@@ -1,0 +1,1 @@
+Metasploit can automatically run commands at startup; just add them to ~/.msf4/msfconsole.rc
