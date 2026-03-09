@@ -51,3 +51,31 @@ Target a set of IPv6 hosts:
 Target a block from a resolved domain name:
 
     set RHOSTS www.example.test/24
+### PayloadUUIDSeed
+The `PayloadUUIDSeed` option allows users to define a custom string used during the generation of a payload's Unique Identifier (UUID). 
+
+* **Stealth:** Providing a unique seed ensures that the resulting payload signature is distinct from default generated payloads.
+* **Tracking:** It helps identify which specific campaign or listener a payload belongs to when it calls back.
+U nano 8.7.1     documentation/cli/msfconsole.md *            
+### Examples
+
+Terminate the first sessions:
+
+    sessions -k 1
+
+Stop some extra running jobs:
+
+    jobs -k 2-6,7,8,11..15
+
+Check a set of IP addresses:
+
+    check 127.168.0.0/16, 127.0.0-2.1-4,15 127.0.0.255
+
+Target a set of IPv6 hosts:
+
+    set RHOSTS fe80::3990:0000/110, ::1-::f0f0
+
+Target a block from a resolved domain name:
+
+    set RHOSTS www.example.test/24
+c
