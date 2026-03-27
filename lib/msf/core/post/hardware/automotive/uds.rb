@@ -11,9 +11,9 @@ module UDS
   # takes the ISO-TP Packets and assembles them in order, strips out the ISO-TP/UDS related info
   # and returns just the data section as an array
   #
-  # @param id [String] Hex value as string. Example: 7e0
-  # @param hash [Hash] Hash that includes "Packets" => [ { "ID" => "0xXXX", "DATA => [ "XX", "XX" ] } ]
-  # @param start_offset [Integer] First packet start offset after meta data
+  # @param [String] id Hex value as string. Example: 7e0
+  # @param [Hash] hash Configuration hash for packet data
+  # @param [Integer] start_offset First packet start offset after meta data
   #
   # @return [Array] Just the data portion of an ISO-TP response represented as Hex Strings
   #
@@ -72,11 +72,11 @@ module UDS
   #
   # Shows the vehicles current data
   #
-  # @param bus [String] unique CAN bus identifier
-  # @param src_id [Integer] Integer representation of the Sending CAN ID
-  # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param pid [Integer] Integer of the PID to get data about
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [String] bus unique CAN bus identifier
+  # @param [Integer] src_id Integer representation of the Sending CAN ID
+  # @param [Integer] dst_id Integer representation of the receiving CAN ID
+  # @param [Integer] pid Integer of the PID to get data about
+  # @param [Hash] hash Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] client.automotive response
   def get_current_data(bus, src_id, dst_id, pid, opt = {})
