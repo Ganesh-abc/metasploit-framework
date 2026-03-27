@@ -264,6 +264,11 @@ module Msf
             tab_complete_directory(str, words)
           end
 
+  #
+  # Displays a random or specific Metasploit ASCII art banner.
+  #
+  # @return [void]
+  #
           def cmd_banner_help
             print_line 'Usage: banner'
             print_line
@@ -274,6 +279,14 @@ module Msf
           #
           # Display one of the fabulous banners.
           #
+  #
+  # Displays a random or specific Metasploit ASCII art banner.
+  #
+  # @return [void]
+  #
+  # Displays a random or specific Metasploit ASCII art banner.
+  #
+  # @return [void]
           def cmd_banner(*args)
             banner = '%cya' + Banner.to_s + "%clr\n\n"
 
@@ -631,6 +644,14 @@ module Msf
           #
           # Instructs the driver to stop executing.
           #
+  #
+  # Exits the Metasploit console.
+  #
+  # @return [void]
+  #
+  # Exits the Metasploit console.
+  #
+  # @return [void]
           def cmd_exit(*args)
             forced = false
             forced = true if (args[0] && args[0] =~ /-y/i)
@@ -2579,6 +2600,10 @@ module Msf
           #
           # @param [Array<String>] _args Command line arguments (unused).
           # @return [void]
+  #
+  # Displays the framework version information.
+  #
+  # @return [void]
           def cmd_version(*args)
             print_line("Framework: #{Msf::Framework::Version}")
             print_line("Console  : #{Msf::Framework::Version}")
