@@ -95,7 +95,6 @@ module Msf::Sessions
 
         result
       end
-
       escaped_cmd_and_args.join(' ')
     end
   end
