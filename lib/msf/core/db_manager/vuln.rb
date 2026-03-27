@@ -314,7 +314,7 @@ module Msf::DBManager::Vuln
   # Update the attributes of a Vuln entry with the values in opts.
   # The values in opts should match the attributes to update.
   #
-  # @param opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
+  # @param [Object] opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
   # @return [Mdm::Vuln] The updated Mdm::Vuln object.
   def update_vuln(opts)
   ::ApplicationRecord.connection_pool.with_connection {
@@ -330,7 +330,7 @@ module Msf::DBManager::Vuln
 
   # Deletes Vuln entries based on the IDs passed in.
   #
-  # @param opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Vuln entries to delete.
+  # # @param [Object] opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Vuln entries to delete.
   # @return [Array] Array containing the Mdm::Vuln objects that were successfully deleted.
   def delete_vuln(opts)
     raise ArgumentError.new("The following options are required: :ids") if opts[:ids].nil?

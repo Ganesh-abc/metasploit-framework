@@ -317,7 +317,7 @@ module Msf
 
     # Adds an option group to the container
     #
-    # @param option_group [Msf::OptionGroup]
+    # @param [Object] option_group [Msf::OptionGroup]
     def add_group(option_group)
       groups[option_group.name] = option_group
     end

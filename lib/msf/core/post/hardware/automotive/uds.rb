@@ -100,7 +100,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Array] All supported pids from Mode $01 get current data
   def get_current_data_pids(bus, src_id, dst_id, opt={})
@@ -184,7 +184,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] Packet Hash with { "MIL" => true|false "DTC_COUNT" => 0 }
   def get_monitor_status(bus, src_id, dst_id, opt = {})
@@ -204,7 +204,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] Packet Hash with { "TEMP_C" => <Celcious Temp>, "TEMP_F" => <Fahrenheit TEmp> }
   def get_engine_coolant_temp(bus, src_id, dst_id, opt = {})
@@ -226,7 +226,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] Packet Hash with { "RPM" => <RPMs> }
   def get_rpms(bus, src_id, dst_id, opt = {})
@@ -245,7 +245,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] Packet Hash with { "SPEED_K" => <km/h>, "SPEED_M" => <mph> }
   def get_vehicle_speed(bus, src_id, dst_id, opt = {})
@@ -266,7 +266,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [String] Description of standard
   def get_obd_standards(bus, src_id, dst_id, opt = {})
@@ -352,7 +352,7 @@ module UDS
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param pid [Integer] Integer of the PID to get data about
   # @param frame [Integer] Freeze Frame Number
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] client.automotive response
   def get_freeze_frame_data(bus, src_id, dst_id, pid, frame, opt = {})
@@ -380,8 +380,8 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Array] Array of DTCs
   def get_dtcs(bus, src_id, dst_id, opt = {})
@@ -435,8 +435,8 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] No packets are expected to return but an error could be returned
   def clear_dtcs(bus, src_id, dst_id, opt = {})
@@ -462,8 +462,8 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Array] Array of DTCs
   def get_frozen_dtcs(bus, src_id, dst_id, opt = {})
@@ -518,7 +518,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] client.automotive response
   def get_vehicle_info(bus, src_id, dst_id, mode, opt = {})
@@ -544,7 +544,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Array] Array of PIDS supported by Mode $09
   def get_vinfo_supported_pids(bus, src_id, dst_id, opt = {})
@@ -572,7 +572,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [String] VIN as ASCII
   def get_vin(bus, src_id, dst_id, opt = {})
@@ -590,7 +590,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [String] Calibration ID as ASCII
   def get_calibration_id(bus, src_id, dst_id, opt = {})
@@ -608,7 +608,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [String] ECU Name as ASCII
   def get_ecu_name(bus, src_id, dst_id, opt = {})
@@ -633,7 +633,7 @@ module UDS
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param level [Integer] The desired DSC level
-  # @param opt [Hash] Optional arguments.  PADDING if set uses this hex value for padding
+  # @param [Object] opt [Hash] Optional arguments.  PADDING if set uses this hex value for padding
   #
   # @return [Hash] client.automtoive response
   def set_dsc(bus, src_id, dst_id, level, opt = {})
@@ -667,7 +667,7 @@ module UDS
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param hard [Boolean] If true a hard reset will be performed
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] client.automtoive response (Could be no response)
   def reset_ecu(bus, src_id, dst_id, hard, opt = {})
@@ -695,7 +695,7 @@ module UDS
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param id [Array] 2 Bytes in an array of the identifier.  Example [ 0xF1, 0x90 ]
-  # @param opt [Hash] Additional Options.  SHOW_ERROR (Returns packet hash instead, default false)
+  # @param [Object] opt [Hash] Additional Options.  SHOW_ERROR (Returns packet hash instead, default false)
   #                                        PADDING if set uses this hex value for padding
   #
   # @return [Array] Data retrieved.  If show_error is true and an error is detected, then packet hash will be returned instead
@@ -753,7 +753,7 @@ module UDS
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param level [Integer] Requested security access level. Default is 1
-  # @param opt [Hash] Optional settings.  PADDING if set uses this hex value for padding
+  # @param [Object] opt [Hash] Optional settings.  PADDING if set uses this hex value for padding
   #
   # @return [Hash] Packet Hash with { "SEED" => [ XX, XX ] }
   def get_security_token(bus, src_id, dst_id, level = 1, opt = {})
@@ -788,9 +788,9 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param key [Array] Array of Hex to be used as the key.  Same size as the seed
+  # @param [Object] key [Array] Array of Hex to be used as the key.  Same size as the seed
   # @param response_level [Integer] Requested security access level response. Usually level + 1. Default is 2
-  # @param opt [Hash] Optional settings. PADDING if set uses this hex value for padding
+  # @param [Object] opt [Hash] Optional settings. PADDING if set uses this hex value for padding
   #
   # @return [Hash] packet response from client.automotoive
   def send_security_token_response(bus, src_id, dst_id, key, response_level = 2, opt = {})
@@ -829,7 +829,7 @@ module UDS
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
   # @param id [Array] 2 Bytes in an array of the identifier.  Example [ 0xF1, 0x90 ]
   # @param data [Array] Array of bytes to write
-  # @param opt [Hash] Optional settings. PADDING if set uses this hex value for padding
+  # @param [Object] opt [Hash] Optional settings. PADDING if set uses this hex value for padding
   #
   # @return [Hash] Packet hash from client.automotive
   def write_data_by_id(bus, src_id, dst_id, id, data, opt = {})
@@ -874,7 +874,7 @@ module UDS
   # @param routine_type [Integer] Type or routine request. Example: 1 = Start, 3 = Report
   # param id [Array] 2 byte Array for the routine identifier
   # @param data [Array] Array of routine data/params. Specific to the routine. Optional, Default []
-  # @param opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
+  # @param [Object] opt [Hash] Additional options to be passed to automotive.send_isotp_and_wait_for_response
   #
   # @return [Hash] Packet hash from client.automotive
   def routine_control(bus, src_id, dst_id, routine_type, id, data = [], opt = {})
@@ -913,7 +913,7 @@ module UDS
   # @param bus [String] unique CAN bus identifier
   # @param src_id [Integer] Integer representation of the Sending CAN ID
   # @param dst_id [Integer] Integer representation of the receiving CAN ID
-  # @param opt [Hash] Optional arguments such as: PADDING if set uses this hex value for padding
+  # @param [Object] opt [Hash] Optional arguments such as: PADDING if set uses this hex value for padding
   #    SUPPRESS_RESPONSE By default suppress ACK from ECU.  Set to false if you want confirmation
   #
   # @return [Hash] Packet hash from client.automotive.  Typically blank unless suppress_response is false

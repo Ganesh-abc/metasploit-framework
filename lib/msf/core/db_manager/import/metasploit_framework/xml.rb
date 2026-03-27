@@ -67,7 +67,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   # Imports `Mdm::Note` objects from the XML element.
   #
   # @param note [Nokogiri::XML::Element] The Note element
-  # @param allow_yaml [Boolean] whether to allow yaml
+  # @param [Object] allow_yaml [Boolean] whether to allow yaml
   # @param note_data [Hash] hash containing note attributes to be passed along
   # @return [void]
   def import_msf_note_element(note, allow_yaml, note_data={})
@@ -91,7 +91,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   # Imports web_form element using Msf::DBManager#report_web_form.
   #
   # @param element [Nokogiri::XML::Element] web_form element.
-  # @param options [Hash{Symbol => Object}] options
+  # @param [Object] options [Hash{Symbol => Object}] options
   # @option options [Boolean] :allow_yaml (false) Whether to allow YAML when
   #   deserializing params.
   # @option options [Mdm::Workspace, nil] :workspace
@@ -127,7 +127,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   # Imports web_page element using Msf::DBManager#report_web_page.
   #
   # @param element [Nokogiri::XML::Element] web_page element.
-  # @param options [Hash{Symbol => Object}] options
+  # @param [Object] options [Hash{Symbol => Object}] options
   # @option options [Boolean] :allow_yaml (false) Whether to allow YAML when
   #   deserializing headers and body.
   # @option options [Mdm::Workspace, nil] :workspace
@@ -184,7 +184,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   # Imports web_vuln element using Msf::DBManager#report_web_vuln.
   #
   # @param element [Nokogiri::XML::Element] web_vuln element.
-  # @param options [Hash{Symbol => Object}] options
+  # @param [Object] options [Hash{Symbol => Object}] options
   # @option options [Boolean] :allow_yaml (false) Whether to allow YAML when
   #   deserializing headers.
   # @option options [Mdm::Workspace, nil] :workspace
@@ -541,7 +541,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   # Checks if the XML document has a format version that the importer
   # understands.
   #
-  # @param name [String] the root node name produced by
+  # @param [Object] name [String] the root node name produced by
   #   {Nokogiri::XML::Reader#from_memory}.
   # @return [Hash{Symbol => Object}] `:allow_yaml` is true if the format
   #   requires YAML loading when calling
@@ -614,7 +614,7 @@ module Msf::DBManager::Import::MetasploitFramework::XML
   #
   # @param element [Nokogiri::XML::Element] the web_form, web_page, or web_vuln
   #   element.
-  # @param options [Hash{Symbol => Object}] options
+  # @param [Object] options [Hash{Symbol => Object}] options
   # @option options [Boolean] :allow_yaml (false) Whether to allow YAML when
   #   deserializing elements.
   # @option options [Proc] :notifier Block called with web_* event and path

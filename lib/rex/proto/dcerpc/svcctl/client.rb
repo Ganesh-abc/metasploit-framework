@@ -35,7 +35,7 @@ class Client
   # Calls OpenSCManagerW() to obtain a handle to the service control manager.
   #
   # @param rhost [String] the target host.
-  # @param access [Integer] the access flags requested.
+  # @param [Object] access [Integer] the access flags requested.
   #
   # @return [Array<String,Integer>] the handle to the service control manager or nil if
   #   the call is not successful and the Windows error code
@@ -68,7 +68,7 @@ class Client
   # @param service_name [String] the service name.
   # @param display_name [String] the display name.
   # @param binary_path [String] the path of the binary to run.
-  # @param opts [Hash] arguments for CreateServiceW()
+  # @param [Object] opts [Hash] arguments for CreateServiceW()
   # @option opts [Integer] :access (SERVICE_ALL_ACCESS) the access level.
   # @option opts [Integer] :type (SERVICE_WIN32_OWN_PROCESS ||
   #   SERVICE_INTERACTIVE_PROCESS) the type of service.
@@ -181,7 +181,7 @@ class Client
   #
   # @param scm_handle [String] the SCM handle (from {#openscmanagerw}).
   # @param service_name [String] the name of the service to open.
-  # @param access [Integer] the level of access requested (default is maximum).
+  # @param [Object] access [Integer] the level of access requested (default is maximum).
   #
   # @return [String, nil] the handle of the service opened, or nil on failure.
   def openservicew(scm_handle, service_name, access = SERVICE_ALL_ACCESS)
@@ -207,7 +207,7 @@ class Client
   # it.  Returns true on success, or false.
   #
   # @param svc_handle [String] the handle of the service (from {#openservicew}).
-  # @param args [Array] an array of arguments to pass to the service (or nil)
+  # @param [Object] args [Array] an array of arguments to pass to the service (or nil)
   #
   # @return [Integer] Windows error code
   def startservice(svc_handle, args=[])

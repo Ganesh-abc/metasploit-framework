@@ -39,7 +39,7 @@ module Metasploit
 
           # Returns function arguments as a string.
           #
-          # @param args [Array<Metasm::C::Variable>]
+          # @param [Object] args [Array<Metasm::C::Variable>]
           # @return [String]
           def make_func_arg_str(args)
             arg_array = []
@@ -60,7 +60,7 @@ module Metasploit
 
           # Returns the arguments (in string) for function declaration.
           #
-          # @param args [Array<Metasm::C::Variable]
+          # @param [Object] args [Array<Metasm::C::Variable]
           # @return [String]
           def make_func_declare_arg_str(args)
             arg_array = []

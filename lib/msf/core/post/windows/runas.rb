@@ -91,8 +91,8 @@ module Msf::Post::Windows::Runas
   #
   # @param domain [String] The target user domain
   # @param user [String] The target user
-  # @param password [String] The target user password
-  # @param application_name [String] The executable to be run, can be
+  # @param [Object] password [String] The target user password
+  # @param [Object] application_name [String] The executable to be run, can be
   #   nil
   # @param command_line [String] The command line or process arguments
   #
@@ -137,8 +137,8 @@ module Msf::Post::Windows::Runas
   #
   # @param domain [String] The target user domain
   # @param user [String] The target user
-  # @param password [String] The target user password
-  # @param application_name [String] The executable to run :CloseHandle
+  # @param [Object] password [String] The target user password
+  # @param [Object] application_name [String] The executable to run :CloseHandle
   # with unexpected arguments
   #          expected: ("testPhToken")
   #                        got: (n be run, can be
@@ -240,7 +240,7 @@ module Msf::Post::Windows::Runas
   # for the CreateProcess_x WinAPI calls depending on the presence
   # of application_name
   #
-  # @param application_name [String] lpApplicationName
+  # @param [Object] application_name [String] lpApplicationName
   # @param command_line [String] lpCommandLine
   # @param max_length [Integer] The max command length of the respective
   #   CreateProcess function

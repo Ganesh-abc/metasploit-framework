@@ -34,7 +34,7 @@ module Rex
         # @param phone_numbers [<String>Array] An array of phone numbers.
         # @param subject [String] MMS subject
         # @param message [String] The message to send.
-        # @param attachment_path [String] (Optional) The attachment to include
+        # @param [Object] attachment_path [String] (Optional) The attachment to include
         # @param ctype [String] (Optional) The content type to use for the attachment
         #
         # @return [void]

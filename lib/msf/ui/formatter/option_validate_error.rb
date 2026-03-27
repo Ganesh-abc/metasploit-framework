@@ -7,7 +7,7 @@ module Msf
         #
         # Print the `Msf::OptionValidateError` error in a human readable format
         #
-        # @param mod  [::Msf::Framework, ::Msf::Simple::Framework]  The mod
+        # @param [Object] mod  [::Msf::Framework, ::Msf::Simple::Framework]  The mod
         # @param error [::Msf::OptionValidateError] The error to print
         def self.print_error(mod, error)
           raise ArgumentError, "invalid error type #{error.class}, expected ::Msf::OptionValidateError" unless error.is_a?(::Msf::OptionValidateError)

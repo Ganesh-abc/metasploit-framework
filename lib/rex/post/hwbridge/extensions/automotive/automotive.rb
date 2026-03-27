@@ -73,7 +73,7 @@ class Automotive < Extension
   #
   # Pass an array of bytes and return an array of ASCII byte representation
   #
-  # @param arr [Array] Array of integers (bytes)
+  # @param [Object] arr [Array] Array of integers (bytes)
   #
   # @return [Array] Array of Hex string equivalents
   def array2hex(arr)

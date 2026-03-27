@@ -4,7 +4,7 @@ module Msf::Auxiliary::ManageEngineXnode::Action
   # Returns an Xnode authentication request hash
   #
   # @param user [String] Username
-  # @param pass [String] Password
+  # @param [Object] pass [String] Password
   # @return [Hash] Xnode authentication request 
   def action_authenticate(user,pass)
     {

@@ -417,7 +417,7 @@ class Kiwi < Extension
   #
   # Create a new golden kerberos ticket on the target machine and return it.
   #
-  # @param opts [Hash] The options to use when creating a new golden kerberos ticket.
+  # @param [Object] opts [Hash] The options to use when creating a new golden kerberos ticket.
   # @option opts [String] :domain_name Domain name.
   # @option opts [String] :domain_sid SID of the domain.
   # @option opts [Integer] :end_in How long to have the ticket last, in hours.

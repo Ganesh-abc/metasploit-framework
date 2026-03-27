@@ -14,7 +14,7 @@ module Msf::Util::EXE::Linux::X86
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_x86_elf(framework, code, opts = {})
@@ -29,7 +29,7 @@ module Msf::Util::EXE::Linux::X86
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_x86_custom_elf(framework, code, opts = {})
@@ -72,7 +72,7 @@ module Msf::Util::EXE::Linux::X86
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_x86_elf_dll(framework, code, opts = {})

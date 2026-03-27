@@ -10,7 +10,7 @@ module Msf::Util::EXE::Bsd::X64
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_bsd_x64_elf(framework, code, opts = {})

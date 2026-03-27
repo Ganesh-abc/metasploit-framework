@@ -668,8 +668,8 @@ class Console::CommandDispatcher::Stdapi::Sys
   # - have redundant entries removed
   #
   # @param pids [Array<String>] The pids to validate
-  # @param allow_pid_0 [Boolean] whether to consider a pid of 0 as valid
-  # @param allow_session_pid [Boolean] whether to consider a pid = the current session pid as valid
+  # @param [Object] allow_pid_0 [Boolean] whether to consider a pid of 0 as valid
+  # @param [Object] allow_session_pid [Boolean] whether to consider a pid = the current session pid as valid
   # @return [Array] Returns an array of valid pids
 
   def validate_pids(pids, allow_pid_0 = false, allow_session_pid = false)
@@ -1297,7 +1297,7 @@ class Console::CommandDispatcher::Stdapi::Sys
   #
   # @todo  Accept process names, much of that code is done (kernelsmith)
   #
-  # @param args [Array<String>] List of one of more pids
+  # @param [Object] args [Array<String>] List of one of more pids
   # @return [Boolean] Returns true if command was successful, else false
   def cmd_suspend(*args)
     # give'em help if they want it, or seem confused

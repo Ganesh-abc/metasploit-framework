@@ -139,9 +139,9 @@ module Packet
   # Generates a response packet for an existing request
   #
   # @param request [String] Net::DNS::Packet, Resolv::DNS::Message] Original request
-  # @param answer [Array] Set of answers to provide in the response
-  # @param authority [Array] Set of authority records to provide in the response
-  # @param additional [Array] Set of additional records to provide in the response
+  # @param [Object] answer [Array] Set of answers to provide in the response
+  # @param [Object] authority [Array] Set of authority records to provide in the response
+  # @param [Object] additional [Array] Set of additional records to provide in the response
   #
   # @return [Dnsruby::Message] Response packet
   def self.generate_response(request, answer = nil, authority = nil, additional = nil)

@@ -20,7 +20,7 @@ module Rex
       # if any post processing is performed on the source (such as for obfuscation).
       #
       # @param file_path [String] The file path to load the GraphML data from.
-      # @param name [String] An optional symbol name to apply to the assembly source.
+      # @param [Object] name [String] An optional symbol name to apply to the assembly source.
       def self.from_graphml_file(file_path, arch: nil, name: nil)
         graphml = Rex::Parser::GraphML.from_file(file_path)
         blocks = create_path(graphml.nodes.select { |_id,node| node.attributes['type'] == 'block' }, graphml.graphs[0].edges)

@@ -7,7 +7,7 @@ module Msf::Auxiliary::ManageEngineXnode::Process
   # @param res_code [Integer] Response code received during the previous get_response call
   # @param repo_name [String] Name of the data repository that was queried
   # @param fields [Array] names of the data repository fields (columns) that were dumped
-  # @param mode [String] the type of query that was performed: standard, total_hits, aggr_min or aggr_max
+  # @param [Object] mode [String] the type of query that was performed: standard, total_hits, aggr_min or aggr_max
   # @return [Array, nil] Array containing the parsed query results if parsing succeeds, nil otherwise
   def process_dr_search(res, res_code, repo_name, fields=nil, mode='standard')
     if res_code == 1 || res.nil? || !(res.instance_of?(Hash) && res.keys.include?('response') && res['response'].instance_of?(Hash))

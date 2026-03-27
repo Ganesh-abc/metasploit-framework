@@ -12,7 +12,7 @@ module Msf::Util::EXE::Windows::X64
     #
     # @param framework [Msf::Framework] The Metasploit framework instance.
     # @param code [String] The shellcode to embed in the executable.
-    # @param opts [Hash] Additional options.
+    # @param [Object] opts [Hash] Additional options.
     # @return [String] The constructed PE executable as a binary string.
 
     def to_win64pe(framework, code, opts = {})
@@ -45,7 +45,7 @@ module Msf::Util::EXE::Windows::X64
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @return           [String]
     def to_win64pe(framework, code, opts = {})
       # Allow the user to specify their own EXE template
@@ -76,7 +76,7 @@ module Msf::Util::EXE::Windows::X64
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :exe_type
     # @option           [String] :service_exe
     # @option           [String] :dll
@@ -93,7 +93,7 @@ module Msf::Util::EXE::Windows::X64
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :exe_type
     # @option           [String] :dll
     # @option           [String] :inject
@@ -115,7 +115,7 @@ module Msf::Util::EXE::Windows::X64
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :exe_type
     # @option           [String] :dll
     # @option           [String] :inject

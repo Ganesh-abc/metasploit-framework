@@ -85,7 +85,7 @@ class Msf::Author
 
   # Constructs an {Author} from a given `name` and `email`
   #
-  # @param name [String] the author's name
+  # @param [Object] name [String] the author's name
   # @param email [String] the author's email
   def initialize(name = nil, email = nil)
     self.name  = name
@@ -168,7 +168,7 @@ class Msf::Author
   end
 
   # Sets the name of the author and updates the email if it's a known author.
-  # @param name [String] the name to set
+  # @param [Object] name [String] the name to set
   def name=(name)
     if KNOWN.has_key?(name)
       self.email = KNOWN[name]

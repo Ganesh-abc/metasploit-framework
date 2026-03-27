@@ -99,7 +99,7 @@ module Msf::DBManager::Loot
   # Update the attributes of a Loot entry with the values in opts.
   # The values in opts should match the attributes to update.
   #
-  # @param opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
+  # @param [Object] opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
   # @return [Mdm::Loot] The updated Mdm::Loot object.
   def update_loot(opts)
     ::ApplicationRecord.connection_pool.with_connection {
@@ -126,7 +126,7 @@ module Msf::DBManager::Loot
 
   # Deletes Loot entries based on the IDs passed in.
   #
-  # @param opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Loot entries to delete.
+  # # @param [Object] opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Loot entries to delete.
   # @return [Array] Array containing the Mdm::Loot objects that were successfully deleted.
   def delete_loot(opts)
     raise ArgumentError.new("The following options are required: :ids") if opts[:ids].nil?

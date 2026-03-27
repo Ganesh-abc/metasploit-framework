@@ -26,7 +26,7 @@ class Msf::ModuleSet < Hash
 
   # Create an instance of the supplied module by its reference name
   #
-  # @param reference_name [String] The module reference name.
+  # @param [Object] reference_name [String] The module reference name.
   # @return [Msf::Module,nil] Instance of the named module or nil if it
   #   could not be created.
   def create(reference_name, cache_type: Msf::ModuleManager::Cache::FILESYSTEM)
@@ -64,7 +64,7 @@ class Msf::ModuleSet < Hash
 
   # Enumerates each module class in the set.
   #
-  # @param opts (see #each_module_list)
+  # @param [Object] opts (see #each_module_list)
   # @yield (see #each_module_list)
   # @yieldparam (see #each_module_list)
   # @return (see #each_module_list)
@@ -76,7 +76,7 @@ class Msf::ModuleSet < Hash
 
   # Custom each_module filtering if an advanced set supports doing extended filtering.
   #
-  # @param opts (see #each_module_list)
+  # # @param [Object] opts (see #each_module_list)
   # @param [String] name the module reference name
   # @param [Array<String, Class>] entry pair of the module reference name and the module class.
   # @return [false] if the module should not be filtered; it should be yielded by {#each_module_list}.
@@ -88,7 +88,7 @@ class Msf::ModuleSet < Hash
   # Enumerates each module class in the set based on their relative ranking to one another.  Modules that are ranked
   # higher are shown first.
   #
-  # @param opts (see #each_module_list)
+  # # @param [Object] opts (see #each_module_list)
   # @yield (see #each_module_list)
   # @yieldparam (see #each_module_list)
   # @return (see #each_module_list)
@@ -146,7 +146,7 @@ class Msf::ModuleSet < Hash
 
   # Checks to see if the supplied module reference name is valid.
   #
-  # @param reference_name [String] The module reference name.
+  # @param [Object] reference_name [String] The module reference name.
   # @return [true] if the module can be {#create created} and cached.
   # @return [false] otherwise
   def valid?(reference_name)

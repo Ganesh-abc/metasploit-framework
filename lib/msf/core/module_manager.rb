@@ -42,7 +42,7 @@ module Msf
 
     # Creates a module instance using the supplied reference name.
     #
-    # @param name [String] A module reference name.  It may optionally
+    # @param [Object] name [String] A module reference name.  It may optionally
     #   be prefixed with a "<type>/", in which case the module will be
     #   created from the {Msf::ModuleSet} for the given <type>.
     #   Otherwise, we step through all sets until we find one that

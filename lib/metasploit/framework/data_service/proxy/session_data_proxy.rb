@@ -26,7 +26,7 @@ module SessionDataProxy
   # If opts is a Msf::Session object, it is converted to a Hash and used for the update.
   # The db_record attribute of the Msf::Session object is updated using the returned Mdm::Session.
   #
-  # @param opts [Hash|Msf::Session] Hash containing the updated values. Key should match the attribute to update.
+  # @param [Object] opts [Hash|Msf::Session] Hash containing the updated values. Key should match the attribute to update.
   #   Must contain :id of record to update. Otherwise, a Msf::Session object is used to update all attributes.
   # @return [Mdm::Session] The updated Mdm::Session object.
   def update_session(opts)

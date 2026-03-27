@@ -58,7 +58,7 @@ module RFTransceiver
 
   #
   # Sets the mode TX, RX or Idle
-  # @param mode [String] Mode type TX/RX/IDLE
+  # @param [Object] mode [String] Mode type TX/RX/IDLE
   # @return [Boolean] success value
   def set_mode(mode)
     return false unless is_rf?
@@ -78,7 +78,7 @@ module RFTransceiver
 
   #
   # Sets the modulation
-  # @param mod [String] Example ASK/OOK
+  # @param [Object] mod [String] Example ASK/OOK
   # @return [Boolean] success value
   def set_modulation(mod)
     return false unless is_rf?
@@ -127,7 +127,7 @@ module RFTransceiver
 
   #
   # Receive a packet
-  # @param timeout [Integer] Optional timeout value
+  # @param [Object] timeout [Integer] Optional timeout value
   # @param blocksize [Integer] Optional blocksize
   # @return [String] Base64 decoded data, could be binary
   def rfrecv(timeout = -1, blocksize = -1)
@@ -248,7 +248,7 @@ module RFTransceiver
 
   #
   # Sets the sync mode
-  # @param mode [Integer] Mode
+  # @param [Object] mode [Integer] Mode
   # @return [Boolean] success value
   def set_sync_mode(mode)
     return false unless is_rf?

@@ -6,7 +6,7 @@ module Rex::Crypto::KeyDerivation::NIST_SP_800_108
   #
   # @param length [Integer] The desired output length of each key in bytes.
   # @param prf [Proc] The pseudorandom function used for key derivation.
-  # @param keys [Integer] The number of derived keys to generate.
+  # @param [Object] keys [Integer] The number of derived keys to generate.
   # @param label [String] Optional label to distinguish different derivations.
   # @param context [String] Optional context to bind the key derivation to specific information.
   #
@@ -30,8 +30,8 @@ module Rex::Crypto::KeyDerivation::NIST_SP_800_108
   #
   # @param secret [String] The secret key used as the HMAC key.
   # @param length [Integer] The desired output length of each key in bytes.
-  # @param algorithm [String, Symbol] The HMAC hash algorithm (e.g., `SHA256`, `SHA512`).
-  # @param keys [Integer] The number of derived keys to generate (default: 1).
+  # @param [Object] algorithm [String, Symbol] The HMAC hash algorithm (e.g., `SHA256`, `SHA512`).
+  # @param [Object] keys [Integer] The number of derived keys to generate (default: 1).
   # @param label [String] Optional label to distinguish different derivations.
   # @param context [String] Optional context to bind the key derivation to specific information.
   #

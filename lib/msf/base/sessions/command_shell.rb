@@ -750,7 +750,7 @@ Shell Banner:
   # Perform command line escaping wherein most chars are able to be escaped by quoting them,
   # but others don't have a valid way of existing inside quotes, so we need to "glue" together
   # a series of sections of the original command line; some sections inside quotes, and some outside
-  # @param arg [String] The command line arg to escape
+  # @param [Object] arg [String] The command line arg to escape
   # @param quote_requiring [Array<String>] The chars that can successfully be escaped inside quotes
   # @param unquotable_char [String] The character that can't exist inside quotes
   # @param escaped_unquotable_char [String] The escaped form of unquotable_char

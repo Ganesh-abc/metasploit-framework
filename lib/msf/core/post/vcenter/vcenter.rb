@@ -86,7 +86,7 @@ module Msf
 
         #
         # Function to validate an x509 certificate. Validates with or without certificate header line
-        # @param cert [String] the string to determine if its a valid x509 certificate
+        # @param [Object] cert [String] the string to determine if its a valid x509 certificate
         # @return [OpenSSL::X509::Certificate] or nil on error
         #
         def validate_x509_cert(cert)
@@ -102,7 +102,7 @@ module Msf
 
         #
         # Function to validate an x509 private key
-        # @param cert [String] the string to determine if its a valid x509 private key
+        # @param [Object] cert [String] the string to determine if its a valid x509 private key
         # @return [OpenSSL::PKey::RSA] or nil on error
         #
         def validate_pkey(private_key)

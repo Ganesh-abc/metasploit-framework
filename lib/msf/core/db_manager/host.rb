@@ -11,7 +11,7 @@ module Msf::DBManager::Host
 
   # Deletes Host entries based on the IDs passed in.
   #
-  # @param opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Host entries to delete.
+  # @param [Object] opts[:ids] [Array] Array containing Integers corresponding to the IDs of the Host entries to delete.
   # @return [Array] Array containing the Mdm::Host objects that were successfully deleted.
   def delete_host(opts)
     raise ArgumentError.new("The following options are required: :ids") if opts[:ids].nil?

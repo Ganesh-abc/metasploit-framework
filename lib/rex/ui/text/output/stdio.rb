@@ -29,7 +29,7 @@ class Output::Stdio < Rex::Ui::Text::Output
   # Constructor
   #
 
-  # @param options [Hash{Symbol => IO}]
+  # @param [Object] options [Hash{Symbol => IO}]
   # @option options [IO]
   def initialize(options={})
     options.assert_valid_keys(:io)

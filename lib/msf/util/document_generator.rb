@@ -12,7 +12,7 @@ module Msf
 
       # Spawns a module document with a browser locally.
       #
-      # @param mod [Msf::Module] Module to create document for.
+      # @param [Object] mod [Msf::Module] Module to create document for.
       # @param out_file [Rex::Quickfile] File handle to write the document to.
       # @return [void]
       def self.spawn_module_document(mod, out_file)
@@ -24,7 +24,7 @@ module Msf
 
       # Returns a module document in HTML.
       #
-      # @param mod [Msf::Module] Module to create document for.
+      # @param [Object] mod [Msf::Module] Module to create document for.
       # @return [void]
       def self.get_module_document(mod)
         kb_path = nil

@@ -64,7 +64,7 @@ module Framework
   # Create a simplified instance of the framework.  This routine takes a hash
   # of parameters as an argument.  This hash can contain:
   #
-  # @param opts [Hash{String => Object}]
+  # @param [Object] opts [Hash{String => Object}]
   # @option opts (see simplify)
   # @return [Msf::Simple::Framework]
   def self.create(opts = {})
@@ -78,7 +78,7 @@ module Framework
   # Extends a framework object that may already exist.
   #
   # @param framework [Msf::Framework, Msf::Simple::Framework] framework to simplify
-  # @param opts [Hash{String => Object}]
+  # # @param [Object] opts [Hash{String => Object}]
   # @option opts [#call] 'OnCreateProc' Proc to call after {#init_simplified}.  Will be passed `framework`.
   # @option opts [String] 'ConfigDirectory'  Directory where configuration is saved.  The `~/.msf4` directory.
   # @option opts [Boolean] 'DisableLogging' (false) `true` to disable `Msf::Logging.init`

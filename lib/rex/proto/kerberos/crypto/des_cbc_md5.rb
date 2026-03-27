@@ -16,7 +16,7 @@ module Rex
 
           # Derive an encryption key based on a password and salt for the given cipher type
           #
-          # @param password [String] The password to use as the basis for key generation
+          # @param [Object] password [String] The password to use as the basis for key generation
           # @param salt [String] A salt (usually based on domain and username)
           # @param params [String] Unused for this encryption type
           # @return [String] The derived key
@@ -84,7 +84,7 @@ module Rex
           # Decrypts the cipher using DES-CBC-MD5 schema
           #
           # @param ciphertext [String] the data to decrypt
-          # @param key [String] the key to decrypt
+          # @param [Object] key [String] the key to decrypt
           # @param msg_type [Integer] ignored for this algorithm
           # @return [String] the decrypted cipher
           # @raise [Rex::Proto::Kerberos::Model::Error::KerberosError] if decryption doesn't succeed
@@ -124,7 +124,7 @@ module Rex
           # Encrypts the cipher using DES-CBC-MD5 schema
           #
           # @param plaintext [String] the data to encrypt
-          # @param key [String] the key to encrypt
+          # @param [Object] key [String] the key to encrypt
           # @param msg_type [Integer] ignored for this algorithm
           # @param confounder [String] Optionally force the confounder to a specific value
           # @return [String] the encrypted data

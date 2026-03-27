@@ -42,9 +42,9 @@ class RPC_Module < RPC_Base
   # Returns a list of payload module names or a hash with payload module names as keys to hashes
   # that contain the module information fields requested. The 'payload/' prefix will not be included.
   #
-  # @param module_info [String] Comma-separated list of module information field names.
+  # @param [Object] module_info [String] Comma-separated list of module information field names.
   # If this is nil, then only module names are returned. Default: nil
-  # @param arch [String] Comma-separated list of one or more architectures that
+  # @param [Object] arch [String] Comma-separated list of one or more architectures that
   # the module must support. The module need only support one of the architectures
   # to be included, not all architectures. Default: nil
   #
@@ -99,9 +99,9 @@ class RPC_Module < RPC_Base
   # Returns a list of encoder module names or a hash with encoder module names as keys to hashes
   # that contain the module information fields requested. The 'encoder/' prefix will not be included.
   #
-  # @param module_info [String] Comma-separated list of module information field names.
+  # @param [Object] module_info [String] Comma-separated list of module information field names.
   # If this is nil, then only module names are returned. Default: nil
-  # @param arch [String] Comma-separated list of one or more architectures that
+  # @param [Object] arch [String] Comma-separated list of one or more architectures that
   # the module must support. The module need only support one of the architectures
   # to be included, not all architectures. Default: nil
   #
@@ -140,9 +140,9 @@ class RPC_Module < RPC_Base
   # Returns a list of NOP module names or a hash with NOP module names as keys to hashes
   # that contain the module information fields requested. The 'nop/' prefix will not be included.
   #
-  # @param module_info [String] Comma-separated list of module information field names.
+  # @param [Object] module_info [String] Comma-separated list of module information field names.
   # If this is nil, then only module names are returned. Default: nil
-  # @param arch [String] Comma-separated list of one or more architectures that
+  # @param [Object] arch [String] Comma-separated list of one or more architectures that
   # the module must support. The module need only support one of the architectures
   # to be included, not all architectures. Default: nil
   #

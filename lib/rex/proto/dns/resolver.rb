@@ -106,7 +106,7 @@ module DNS
     # Configure proxy setting and additional timeout
     #
     # @param prox [String] SOCKS proxy connection string
-    # @param timeout_added [Fixnum] Added TCP timeout to account for proxy
+    # @param [Object] timeout_added [Fixnum] Added TCP timeout to account for proxy
     def proxies=(prox, timeout_added = 250)
       return if prox.nil?
       if prox.is_a?(String) and prox.strip =~ /^socks/i
@@ -142,7 +142,7 @@ module DNS
     #
     # Send DNS request over appropriate transport and process response
     #
-    # @param argument [Object] An object holding the DNS message to be processed.
+    # @param [Object] argument [Object] An object holding the DNS message to be processed.
     # @param type [Fixnum] Type of record to look up
     # @param cls [Fixnum] Class of question to look up
     # @return [Dnsruby::Message] DNS response
@@ -207,7 +207,7 @@ module DNS
     #
     # @param packet [Net::DNS::Packet] Packet associated with packet_data
     # @param packet_data [String] Data segment of DNS request packet
-    # @param nameservers [Array<[String,Hash]>] List of nameservers to use for this request, and their associated socket options
+    # @param [Object] nameservers [Array<[String,Hash]>] List of nameservers to use for this request, and their associated socket options
     # @param prox [String] Proxy configuration for TCP socket
     #
     # @return ans [String] Raw DNS reply
@@ -308,7 +308,7 @@ module DNS
     #
     # @param packet [Net::DNS::Packet] Packet associated with packet_data
     # @param packet_data [String] Data segment of DNS request packet
-    # @param nameservers [Array<[String,Hash]>] List of nameservers to use for this request, and their associated socket options
+    # @param [Object] nameservers [Array<[String,Hash]>] List of nameservers to use for this request, and their associated socket options
     #
     # @return ans [String] Raw DNS reply
     def send_udp(packet,packet_data, nameservers)
@@ -355,7 +355,7 @@ module DNS
     #
     # Perform search using the configured searchlist and resolvers
     #
-    # @param name
+    # @param [Object] name
     # @param type [Fixnum] Type of record to look up
     # @param cls [Fixnum] Class of question to look up
     #
@@ -385,7 +385,7 @@ module DNS
     #
     # Perform query with default domain validation
     #
-    # @param name
+    # @param [Object] name
     # @param type [Fixnum] Type of record to look up
     # @param cls [Fixnum] Class of question to look up
     #

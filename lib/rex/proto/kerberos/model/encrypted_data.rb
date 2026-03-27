@@ -64,7 +64,7 @@ module Rex
           # Decrypts the cipher with etype encryption schema, presuming that the
           # data is an ASN1 structure
           #
-          # @param key [String] the key to decrypt
+          # @param [Object] key [String] the key to decrypt
           # @param msg_type [Integer] the message type
           # @return [String] the decrypted `cipher`
           # @raise [Rex::Proto::Kerberos::Model::Error::KerberosDecodingError] if decryption doesn't succeed

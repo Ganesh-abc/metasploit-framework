@@ -9,7 +9,7 @@ module Rex::Proto::LDAP::AuthAdapter
   # is being handled by an external entity (the relay victim) and it expects to be called repeatedly with the necessary
   # NTLM message
   class RexRelayNtlm < Net::LDAP::AuthAdapter
-    # @param auth [Hash] the options for binding
+    # @param [Object] auth [Hash] the options for binding
     # @option opts [String] :ntlm_message the serialized NTLM message to send to the server, the type does not matter
     def bind(auth)
       mech = 'GSS-SPNEGO'

@@ -12,7 +12,7 @@ module Msf::Util::EXE::Windows::Aarch64
     #
     # @param framework [Msf::Framework] The Metasploit framework instance.
     # @param code [String] The shellcode to embed in the executable.
-    # @param opts [Hash] Additional options.
+    # @param [Object] opts [Hash] Additional options.
     # @return [String] The constructed PE executable as a binary string.
 
     def to_winaarch64pe(framework, code, opts = {})

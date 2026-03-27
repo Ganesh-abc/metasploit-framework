@@ -224,7 +224,7 @@ class Msf::Payload::UUID
   #
   # Look up the numeric architecture ID given a string as input
   #
-  # @param name [String] The name of the architecture to lookup
+  # @param [Object] name [String] The name of the architecture to lookup
   # @return [Integer] The integer value of this architecture
   #
   def self.find_architecture_id(name)

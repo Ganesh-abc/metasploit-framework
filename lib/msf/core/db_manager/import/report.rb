@@ -1,6 +1,6 @@
 module Msf::DBManager::Import::Report
   # @param report [REXML::Element] to be imported
-  # @param args [Hash]
+  # @param [Object] args [Hash]
   # @param base_dir [String]
   def import_report(report, args, base_dir)
     tmp = args[:ifd][:zip_tmp]

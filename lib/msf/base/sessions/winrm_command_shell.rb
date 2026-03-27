@@ -172,7 +172,7 @@ module Msf::Sessions
     # Create an MSF command shell from a WinRM shell object
     #
     # @param shell [WinRM::Shells::Base] A WinRM shell object
-    # @param opts [Hash] Optional parameters to pass to the session object.
+    # @param [Object] opts [Hash] Optional parameters to pass to the session object.
     def initialize(shell, interactive_command_id, opts = {})
       self.shell = shell
       self.interactive_command_id = interactive_command_id

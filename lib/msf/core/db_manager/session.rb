@@ -54,7 +54,7 @@ module Msf::DBManager::Session
   #   Mdm::Session#via_exploit if +session.via_exploit+ is
   #   'exploit/multi/handler'.
   #
-  #   @param opts [Hash{Symbol => Object}] options
+  #   @param [Object] opts [Hash{Symbol => Object}] options
   #   @option opt [Msf::Session, #datastore, #platform, #type, #via_exploit, #via_payload] :session
   #     The in-memory session to persist to the database.
   #   @option opts [Mdm::Workspace] :workspace The workspace for in which the
@@ -76,7 +76,7 @@ module Msf::DBManager::Session
   # @overload report_session(opts)
   #   Creates an Mdm::Session from Mdm::Host.
   #
-  #   @param opts [Hash{Symbol => Object}] options
+  #   # @param [Object] opts [Hash{Symbol => Object}] options
   #   @option opts [DateTime, Time] :closed_at The date and time the session was
   #     closed.
   #   @option opts [String] :close_reason Reason the session was closed.
@@ -183,7 +183,7 @@ module Msf::DBManager::Session
   # Update the attributes of a session entry with the values in opts.
   # The values in opts should match the attributes to update.
   #
-  # @param opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
+  # # @param [Object] opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
   # @return [Mdm::Session] The updated Mdm::Session object.
   def update_session(opts)
     return if not active

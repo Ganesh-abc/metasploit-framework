@@ -78,7 +78,7 @@ module Msf::Util::EXE::Common
     # read_replace_script_template
     #
     # @param filename [String] Name of the file
-    # @param hash_sub [Hash]
+    # @param [Object] hash_sub [Hash]
     def read_replace_script_template(filename, hash_sub)
       template_pathname = File.join(Msf::Config.data_directory, "templates",
                                     "scripts", filename)
@@ -128,7 +128,7 @@ module Msf::Util::EXE::Common
     # segments as writable and overwrites the entrypoint (usually _start) with
     # the payload.
     # @param framework  [Msf::Framework]  The framework of you want to use
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @param template   [String]
     # @param code       [String]
@@ -232,7 +232,7 @@ module Msf::Util::EXE::Common
     # @param jsp_raw [String] JSP code to be added in a file called +jsp_name+
     #   in the archive. This will be compiled by the victim servlet container
     #   (e.g., Tomcat) and act as the main function for the servlet.
-    # @param opts [Hash]
+    # # @param [Object] opts [Hash]
     # @option opts :jsp_name [String] Name of the <jsp-file> in the archive
     #   _without the .jsp extension_. Defaults to random.
     # @option opts :app_name [String] Name of the app to put in the <servlet-name>

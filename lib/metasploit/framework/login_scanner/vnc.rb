@@ -109,7 +109,7 @@ module Metasploit
         # @param client [Rex::Proto::RFB::Client] The VNC client object to authenticate through
         # @param type [Rex::Proto::RFB::AuthType] The VNC authentication type to attempt
         # @param username [String] the username to attempt the authentication with
-        # @param password [String] the password to attempt the authentication with
+        # @param [Object] password [String] the password to attempt the authentication with
         def vnc_auth(client,type,username,password)
           success = false
           5.times do |n|

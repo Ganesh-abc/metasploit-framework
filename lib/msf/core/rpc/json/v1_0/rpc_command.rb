@@ -126,7 +126,7 @@ module Msf::RPC::JSON
       end
 
       # Stringify the names (keys) in hash.
-      # @param hash [Hash] input hash
+      # @param [Object] hash [Hash] input hash
       # @return [Hash] a new hash with strings for the keys.
       def stringify_names(hash)
         JSON.parse(JSON.dump(hash), symbolize_names: false)

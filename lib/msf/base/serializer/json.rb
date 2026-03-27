@@ -13,7 +13,7 @@ module Msf
       # Returns a formatted string that contains information about
       # the supplied module instance.
       #
-      # @param mod [Msf::Module] the module to dump information for.
+      # @param [Object] mod [Msf::Module] the module to dump information for.
       # @param _indent [String] the indentation to use.
       # @return [String] formatted text output of the dump.
       def self.dump_module(mod, _indent = "")
@@ -37,7 +37,7 @@ module Msf
 
       # Dumps an exploit's targets.
       #
-      # @param mod [Msf::Exploit] the exploit module to dump targets
+      # @param [Object] mod [Msf::Exploit] the exploit module to dump targets
       #   for.
       # @return [Array] the exploit targets
       def self.dump_exploit_targets(mod)
@@ -50,7 +50,7 @@ module Msf
 
       # Dumps a module's actions
       #
-      # @param mod [Msf::Module] the module.
+      # @param [Object] mod [Msf::Module] the module.
       # @return [Array] the module actions
       def self.dump_module_actions(mod)
         list = []
@@ -65,7 +65,7 @@ module Msf
 
       # Dumps the module's selected action
       #
-      # @param mod [Msf::Module] the module.
+      # @param [Object] mod [Msf::Module] the module.
       # @return [Array] the module options
       def self.dump_module_action(mod)
         list = []
@@ -90,7 +90,7 @@ module Msf
 
       # Dumps information about an exploit module.
       #
-      # @param mod [Msf::Exploit] the exploit module.
+      # @param [Object] mod [Msf::Exploit] the exploit module.
       # @return [String] the json string form of the information.
       def self.dump_exploit_module(mod)
         # Return a json dump of exploit module data
@@ -109,7 +109,7 @@ module Msf
 
       # Dumps information about an auxiliary module.
       #
-      # @param mod [Msf::Auxiliary] the auxiliary module.
+      # @param [Object] mod [Msf::Auxiliary] the auxiliary module.
       # @return [String] the string form of the information.
       def self.dump_auxiliary_module(mod)
         # Return a json dump of auxiliary module data
@@ -123,7 +123,7 @@ module Msf
 
       # Dumps information about a post module.
       #
-      # @param mod [Msf::Post] the post module.
+      # @param [Object] mod [Msf::Post] the post module.
       # @return [String] the string form of the information.
       def self.dump_post_module(mod)
         # Return a json dump of post module data
@@ -138,7 +138,7 @@ module Msf
 
       # Dumps information about a payload module.
       #
-      # @param mod [Msf::Payload] the payload module.
+      # @param [Object] mod [Msf::Payload] the payload module.
       # @return [String] the string form of the information.
       def self.dump_payload_module(mod)
         # Return a json dump of post module data
@@ -152,7 +152,7 @@ module Msf
 
       # Returns an array of all authors
       #
-      # @param mod [Msf::Module]
+      # @param [Object] mod [Msf::Module]
       # @return [Array] an array of all authors
       def self.dump_authors(mod)
         # Authors
@@ -163,7 +163,7 @@ module Msf
 
       # Dumps information about a module, just the basics.
       #
-      # @param mod [Msf::Module] the module.
+      # @param [Object] mod [Msf::Module] the module.
       # @return [String] the string form of the information.
       def self.dump_basic_module(mod)
         {
@@ -176,7 +176,7 @@ module Msf
       # Dumps the list of options associated with the
       # supplied module.
       #
-      # @param mod [Msf::Module] the module.
+      # @param [Object] mod [Msf::Module] the module.
       # @return [Array] the array of the information.
       def self.dump_options(mod)
         list = []
@@ -197,7 +197,7 @@ module Msf
 
       # Dumps the references associated with the supplied module.
       #
-      # @param mod [Msf::Module] the module.
+      # @param [Object] mod [Msf::Module] the module.
       # @return [Array] the array of the information.
       def self.dump_references(mod)
         if (mod.respond_to? :references) && mod.references && (mod.references.length > 0)

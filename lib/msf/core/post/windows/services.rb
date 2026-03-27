@@ -94,7 +94,7 @@ module Msf
         # with a block, yields the manager and closes it when the block
         # returns.
         #
-        # @param opts [Hash]
+        # @param [Object] opts [Hash]
         # @option opts [String] :host (nil) The host on which to open the
         #   service manager. May be a hostname or IP address.
         # @option opts [Integer] :access (0xF003F) Bitwise-or of the
@@ -250,7 +250,7 @@ module Msf
         # If ExtAPI is available we return the DACL, LOGroup, and Interactive
         # values otherwise these values are nil
         #
-        # @param name [String] The target service's name (not to be confused
+        # @param [Object] name [String] The target service's name (not to be confused
         #   with Display Name). Case sensitive.
         #
         # @return [Hash, nil] Hash containing service details on success, nil otherwise.
@@ -287,7 +287,7 @@ module Msf
         #
         # Check if the specified Windows service exists.
         #
-        # @param name [String] The target service's name (not to be confused
+        # @param [Object] name [String] The target service's name (not to be confused
         #   with Display Name). Case sensitive.
         #
         # @return [Boolean]
@@ -352,8 +352,8 @@ module Msf
         #
         # Modify a service on the session host
         #
-        # @param name [String] Name of the service to be used as the key
-        # @param opts [Hash] Settings to be modified
+        # @param [Object] name [String] Name of the service to be used as the key
+        # # @param [Object] opts [Hash] Settings to be modified
         # @param server [String,nil] A hostname or IP address. Default is the
         #   remote localhost
         #
@@ -384,8 +384,8 @@ module Msf
         #
         # Create a service that runs +executable_on_host+ on the session host
         #
-        # @param name [String] Name of the service to be used as the key
-        # @param opts [Hash] Settings to be modified
+        # @param [Object] name [String] Name of the service to be used as the key
+        # # @param [Object] opts [Hash] Settings to be modified
         # @param server [String,nil] A hostname or IP address. Default is the
         #   remote localhost
         #
@@ -433,7 +433,7 @@ module Msf
         #
         # Start a service.
         #
-        # @param name [String] Service name (not display name)
+        # @param [Object] name [String] Service name (not display name)
         # @param server [String,nil] A hostname or IP address. Default is the
         #   remote localhost
         #
@@ -537,7 +537,7 @@ module Msf
         # If service is disabled it will re-enable
         # If service is running it will stop and restart
         #
-        # @param name [String] The service name
+        # @param [Object] name [String] The service name
         # @param start_type [Integer] The start type to configure if disabled
         # @param server [String] The server to target
         #
@@ -669,7 +669,7 @@ module Msf
         #
         # Start a service using sc.exe.
         #
-        # @param name [String] Service name (not display name)
+        # @param [Object] name [String] Service name (not display name)
         # @param server [String,nil] A hostname or IP address. Default is the
         #   remote localhost.
         #
@@ -712,7 +712,7 @@ module Msf
         #
         # Stop a service using sc.exe.
         #
-        # @param name [String] Service name (not display name)
+        # @param [Object] name [String] Service name (not display name)
         # @param server [String,nil] A hostname or IP address. Default is the
         #   remote localhost.
         #

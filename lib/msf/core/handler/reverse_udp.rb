@@ -60,7 +60,7 @@ module ReverseUdp
 
   # A URI describing where we are listening
   #
-  # @param addr [String] the address that
+  # @param [Object] addr [String] the address that
   # @return [String] A URI of the form +scheme://host:port/+
   def listener_uri(addr = datastore['ReverseListenerBindAddress'])
     addr = datastore['LHOST'] if addr.nil? || addr.empty?

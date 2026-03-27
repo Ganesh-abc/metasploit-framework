@@ -52,7 +52,7 @@ module Payload::Python::MeterpreterLoader
   # Get the raw Python Meterpreter stage and patch in values based on the
   # configuration
   #
-  # @param opts [Hash] The options to use for patching the stage data.
+  # @param [Object] opts [Hash] The options to use for patching the stage data.
   # @option opts [String] :http_proxy_host The host to use as a proxy for
   #   HTTP(S) transports.
   # @option opts [String] :http_proxy_port The port to use when a proxy  host is

@@ -197,7 +197,7 @@ module WindowsRegistry
 
 
     # @param hive_data [String] The binary registry data
-    # @param name [Symbol] The key name to add specific helpers. Only `:sam`
+    # @param [Object] name [Symbol] The key name to add specific helpers. Only `:sam`
     # @param root [String] The root key and subkey corresponding to the hive_data
     #   and `:security` are supported at the moment.
     def initialize(hive_data, name: nil, root: nil)
@@ -263,7 +263,7 @@ module WindowsRegistry
 
     # Search for a given key from the ROOT key and returns it as a block
     #
-    # @param key [String] The registry key to look for
+    # @param [Object] key [String] The registry key to look for
     # @return [RegHbinBlock, nil] The key, if found, nil otherwise
     def find_key(key)
       # Let's strip '\' from the beginning, except for the case of
@@ -327,8 +327,8 @@ module WindowsRegistry
     # Returns the offset of a given subkey in a hash record
     #
     # @param magic [Integer] The signtaure (MAGIC)
-    # @param hash_rec [Integer] The hash record
-    # @param key [Integer] The subkey to look for
+    # @param [Object] hash_rec [Integer] The hash record
+    # @param [Object] key [Integer] The subkey to look for
     # @return [Integer] The offset of the subkey
     def get_offset(magic, hash_rec, key)
       case magic
@@ -353,7 +353,7 @@ module WindowsRegistry
     # Returns the hash of a LH subkey
     # from http://www.sentinelchicken.com/data/TheWindowsNTRegistryFileFormat.pdf (Appendix C)
     #
-    # @param key [Integer] The LH subkey
+    # @param [Object] key [Integer] The LH subkey
     # @return [Integer] The hash
     def get_lh_hash(key)
       res = 0
@@ -412,7 +412,7 @@ module WindowsRegistry
 
     # Enumerate the subkey names under `key`
     #
-    # @param key [String] The parent key from which to enumerate
+    # @param [Object] key [String] The parent key from which to enumerate
     # @return [Array] The key names
     # @raise [ArgumentError] If the parent key is not a NK record
     def enum_key(key)
@@ -442,7 +442,7 @@ module WindowsRegistry
 
     # Enumerate the subkey values under `key`
     #
-    # @param key [String] The parent key from which to enumerate
+    # @param [Object] key [String] The parent key from which to enumerate
     # @return [Array] The key values
     # @raise [ArgumentError] If the parent key is not a NK record
     def enum_values(key)

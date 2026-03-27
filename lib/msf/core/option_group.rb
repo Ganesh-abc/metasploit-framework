@@ -12,9 +12,9 @@ module Msf
     # @return [Array<String>] List of options that if present must have a value set
     attr_accessor :required_options
 
-    # @param name [String] Name for the group
+    # @param [Object] name [String] Name for the group
     # @param description [String] Description to be displayed to the user
-    # @param option_names [Array<String>] List of datastore option names
+    # @param [Object] option_names [Array<String>] List of datastore option names
     # @param required_options [Array<String>] List of options that if present must have a value set
     def initialize(name:, description:, option_names: [], required_options: [])
       self.name = name
@@ -23,19 +23,19 @@ module Msf
       self.required_options = required_options
     end
 
-    # @param option_name [String] Name of the datastore option to be added to the group
+    # @param [Object] option_name [String] Name of the datastore option to be added to the group
     def add_option(option_name)
       @option_names << option_name
     end
 
-    # @param option_names [Array<String>] List of datastore option names to be added to the group
+    # @param [Object] option_names [Array<String>] List of datastore option names to be added to the group
     def add_options(option_names)
       @option_names.concat(option_names)
     end
 
     # Validates that any registered and required options are set
     #
-    # @param options [Array<Msf::OptBase>] A modules registered options
+    # @param [Object] options [Array<Msf::OptBase>] A modules registered options
     # @param datastore [Msf::DataStore|Msf::DataStore] A modules datastore
     def validate(options, datastore)
       issues = {}

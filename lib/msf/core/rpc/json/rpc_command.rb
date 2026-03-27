@@ -14,7 +14,7 @@ module Msf::RPC::JSON
 
     # Add a method to the RPC Command
     # @param method [Method] the Method
-    # @param name [String] the name the method is register under. The method name is used if nil.
+    # @param [Object] name [String] the name the method is register under. The method name is used if nil.
     # @return [Method] the Method.
     def register_method(method, name: nil)
       if name.nil?

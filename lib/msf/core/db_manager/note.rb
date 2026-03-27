@@ -210,7 +210,7 @@ module Msf::DBManager::Note
   # Update the attributes of a note entry with the values in opts.
   # The values in opts should match the attributes to update.
   #
-  # @param opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
+  # @param [Object] opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
   # @return [Mdm::Note] The updated Mdm::Note object.
   def update_note(opts)
     ::ApplicationRecord.connection_pool.with_connection {
@@ -228,7 +228,7 @@ module Msf::DBManager::Note
 
   # Deletes note entries based on the IDs passed in.
   #
-  # @param opts[:ids] [Array] Array containing Integers corresponding to the IDs of the note entries to delete.
+  # # @param [Object] opts[:ids] [Array] Array containing Integers corresponding to the IDs of the note entries to delete.
   # @return [Array] Array containing the Mdm::Note objects that were successfully deleted.
   def delete_note(opts)
     raise ArgumentError.new("The following options are required: :ids") if opts[:ids].nil?

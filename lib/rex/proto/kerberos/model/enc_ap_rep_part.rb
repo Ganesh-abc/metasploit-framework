@@ -61,7 +61,7 @@ module Rex
           # Encrypts the Rex::Proto::Kerberos::Model::EncApRepPart
           #
           # @param etype [Integer] the crypto schema to encrypt
-          # @param key [String] the key to encrypt
+          # @param [Object] key [String] the key to encrypt
           # @return [String] the encrypted result
           # @raise [NotImplementedError] if the encryption schema isn't supported
           def encrypt(etype, key)

@@ -86,7 +86,7 @@ class Metasploit::Framework::Command::Base
   # Instance Methods
   #
 
-  # @param attributes [Hash{Symbol => ActiveSupport::OrderedOptions,Rails::Application}]
+  # @param [Object] attributes [Hash{Symbol => ActiveSupport::OrderedOptions,Rails::Application}]
   # @option attributes [Rails::Application] :application
   # @option attributes [ActiveSupport::OrderedOptions] :parsed_options
   # @raise [KeyError] if :application is not given

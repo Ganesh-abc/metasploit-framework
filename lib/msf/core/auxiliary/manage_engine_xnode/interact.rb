@@ -25,7 +25,7 @@ module Msf::Auxiliary::ManageEngineXnode::Interact
   # Sends a request to an Xnode server
   #
   # @param sock [Socket] Socket to use for the request
-  # @param action_hash [Hash] Hash containing an Xnode-compatible request
+  # @param [Object] action_hash [Hash] Hash containing an Xnode-compatible request
   # @return [Hash, nil] Hash containing a JSON-parsed Xnode server response if interaction with the server succeeded, nil otherwise
   def send_to_sock(sock, action_hash)
     unless action_hash.instance_of?(Hash)
@@ -60,7 +60,7 @@ module Msf::Auxiliary::ManageEngineXnode::Interact
   # Calls send_to_sock and performs basic checks on the received response to ensure it is valid
   #
   # @param sock [Socket] Socket to use for the request
-  # @param action_hash [Hash] Hash containing an Xnode-compatible request
+  # @param [Object] action_hash [Hash] Hash containing an Xnode-compatible request
   # @param warning_message [String] String to print via print_warning if the server response doesn't match the expected format
   # @param expected_response_key [String] String that should be present as a key in the 'response' hash that is expected to be part of the JSON response
   # @return [Array] Array containing a response code and a JSON-parsed Xnode server response hash if interaction with the server succeeded, Array containing a response code and nil otherwise

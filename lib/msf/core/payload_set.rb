@@ -300,8 +300,8 @@ class PayloadSet < ModuleSet
   # which it is, we add it to the appropriate list.
   #
   # @param payload_module [::Module] The module name.
-  # @param reference_name [String] The module reference name.
-  # @param modinfo [Hash{String => Array}] additional information about the
+  # @param [Object] reference_name [String] The module reference name.
+  # @param [Object] modinfo [Hash{String => Array}] additional information about the
   #   module.
   # @option modinfo [Array<String>] 'files' List of paths to the ruby source
   #   files where +class_or_module+ is defined.

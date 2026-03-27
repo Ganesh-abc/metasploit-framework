@@ -109,7 +109,7 @@ module Msf
     attr_accessor :encryption_iv
 
 
-    # @param opts [Hash] The options hash
+    # @param [Object] opts [Hash] The options hash
     # @option opts [String] :payload (see #payload)
     # @option opts [String] :format (see #format)
     # @option opts [String] :encoder (see #encoder)
@@ -197,7 +197,7 @@ module Msf
 
     # This method takes a payload module and tries to reconcile a chosen
     # arch with the arches supported by the module.
-    # @param mod [Msf::Payload] The module class to choose an arch for
+    # @param [Object] mod [Msf::Payload] The module class to choose an arch for
     # @return [String] String form of the arch if a valid arch found
     # @return [Nil] if no valid arch found
     def choose_arch(mod)
@@ -216,7 +216,7 @@ module Msf
 
     # This method takes a payload module and tries to reconcile a chosen
     # platform with the platforms supported by the module.
-    # @param mod [Msf::Payload] The module class to choose a platform for
+    # @param [Object] mod [Msf::Payload] The module class to choose a platform for
     # @return [Msf::Module::PlatformList] The selected platform list
     def choose_platform(mod)
       # By default, platform_list will at least return Msf::Module::Platform

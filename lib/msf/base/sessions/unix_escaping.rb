@@ -13,7 +13,7 @@ module Msf::Sessions
     end
 
     # Escape an individual argument per Unix shell rules
-    # @param arg [String] Shell argument
+    # @param [Object] arg [String] Shell argument
     def escape_arg(arg)
       quote_requiring = ['\\', '`', '(', ')', '<', '>', '&', '|', ' ', '@', '"', '$', ';']
       result = CommandShell._glue_cmdline_escape(arg, quote_requiring, "'", "\\'", "'")

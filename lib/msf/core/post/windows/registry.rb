@@ -216,7 +216,7 @@ module Registry
 
   # Checks if a key exists on the target registry
   #
-  # @param key [String] the full path of the key to check
+  # @param [Object] key [String] the full path of the key to check
   # @return [Boolean] true if the key exists on the target registry, false otherwise
   #   (also in case of error)
   def registry_key_exist?(key)
@@ -434,7 +434,7 @@ protected
 
   # Checks if a key exists on the target registry using a shell session
   #
-  # @param key [String] the full path of the key to check
+  # @param [Object] key [String] the full path of the key to check
   # @return [Boolean] true if the key exists on the target registry, false otherwise,
   #   even if case of error (invalid arguments) or the session hasn't permission to
   #   access the key
@@ -657,7 +657,7 @@ protected
 
   # Checks if a key exists on the target registry using a meterpreter session
   #
-  # @param key [String] the full path of the key to check
+  # @param [Object] key [String] the full path of the key to check
   # @return [Boolean] true if the key exists on the target registry, false otherwise
   #   (also in case of error)
   def meterpreter_registry_key_exist?(key)

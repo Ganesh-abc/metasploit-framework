@@ -25,7 +25,7 @@ module Rex
       # converted to Ruby integer, while float and double values will be converted to floats. For booleans, values that are
       # either blank or "false" (case-insensitive) will evaluate to Ruby's false, while everything else will be true.
       #
-      # @param attr_type [Symbol] The type of the attribute, one of either boolean, int, long, float, double or string.
+      # @param [Object] attr_type [Symbol] The type of the attribute, one of either boolean, int, long, float, double or string.
       # @param value [String] The value to convert into a native Ruby data type.
       def self.convert_attribute(attr_type, value)
         case attr_type
@@ -53,7 +53,7 @@ module Rex
       #
       class MetaAttribute
         # @param id [String] The attribute's document identifier.
-        # @param name [String] The attribute's name as used by applications.
+        # @param [Object] name [String] The attribute's name as used by applications.
         # @param type [Symbol] The data type of the attribute, one of either boolean, int, long, float, double or string.
         # @param domain [Symbol] What elements this attribute is valid for, one of either edge, node, graph or all.
         # @param default An optional default value for this attribute.
@@ -68,7 +68,7 @@ module Rex
         #
         # Create a new instance from a Key element.
         #
-        # @param key [Rex::Parser::GraphML::Element::Key] The key to create a new instance from.
+        # @param [Object] key [Rex::Parser::GraphML::Element::Key] The key to create a new instance from.
         def self.from_key(key)
           new(key.id, key.attr_name, key.attr_type, domain: key.domain, default: key.default&.value)
         end
@@ -130,7 +130,7 @@ module Rex
         #
         class Data
           ELEMENT_NAME = 'data'.freeze
-          # @param key [String] The identifier of the attribute that this object contains a value for.
+          # @param [Object] key [String] The identifier of the attribute that this object contains a value for.
           def initialize(key)
             @key = key
             @value = nil
@@ -296,7 +296,7 @@ module Rex
         class Key
           ELEMENT_NAME = 'key'.freeze
           # @param id [String] The document identifier of the attribute described by this element.
-          # @param name [String] The name (as used by applications) of the attribute described by this element.
+          # @param [Object] name [String] The name (as used by applications) of the attribute described by this element.
           # @param type [Symbol] The data type of the attribute described by this element, one of either boolean, int, long, float, double or string.
           # @param domain [Symbol] What elements the attribute described by this element is valid for, one of either edge, node, graph or all.
           def initialize(id, name, type, domain)

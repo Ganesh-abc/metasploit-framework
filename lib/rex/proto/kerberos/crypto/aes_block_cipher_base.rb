@@ -19,7 +19,7 @@ module Rex
 
           # Derive an encryption key based on a password and salt for the given cipher type
           #
-          # @param password [String] The password to use as the basis for key generation
+          # @param [Object] password [String] The password to use as the basis for key generation
           # @param salt [String] A salt (usually based on domain and username)
           # @param params [String] When unpacked, the number of iterations used during key generation
           # @return [String] The derived key

@@ -12,7 +12,7 @@ module Msf::Util::EXE::Linux::Riscv32le
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_riscv32le_elf(framework, code, opts = {})
@@ -24,7 +24,7 @@ module Msf::Util::EXE::Linux::Riscv32le
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_riscv32le_elf_dll(framework, code, opts = {})

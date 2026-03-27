@@ -324,7 +324,7 @@ module Msf::DBManager::ModuleCache
 
   # Creates an Mdm::Module::Detail from a module instance.
   #
-  # @param module_instance [Msf::Module] a metasploit module instance.
+  # @param [Object] module_instance [Msf::Module] a metasploit module instance.
   # @raise [ActiveRecord::RecordInvalid] if Hash from {#module_to_details_hash} is invalid attributes for
   #   Mdm::Module::Detail.
   # @return [void]

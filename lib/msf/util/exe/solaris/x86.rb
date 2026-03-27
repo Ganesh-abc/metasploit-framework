@@ -13,7 +13,7 @@ module Msf::Util::EXE::Solaris::X86
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_solaris_x86_elf(framework, code, opts = {})

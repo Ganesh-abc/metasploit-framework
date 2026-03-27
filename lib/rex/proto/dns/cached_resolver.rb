@@ -33,7 +33,7 @@ module DNS
     # send remainder of DNS queries over appropriate transport and
     # cache answers before returning to caller.
     #
-    # @param argument [Object] An object holding the DNS message to be processed.
+    # @param [Object] argument [Object] An object holding the DNS message to be processed.
     # @param type [Fixnum] Type of record to look up
     # @param cls [Fixnum] Class of question to look up
     #

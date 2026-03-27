@@ -222,7 +222,7 @@ module Msf::Sessions
     #
     # @param ssh_connection [Net::SSH::Connection] The SSH connection to create a
     #   session instance for.
-    # @param opts [Hash] Optional parameters to pass to the session object.
+    # @param [Object] opts [Hash] Optional parameters to pass to the session object.
     def initialize(ssh_connection, opts = {})
       @ssh_connection = ssh_connection
       @sock = ssh_connection.transport.socket

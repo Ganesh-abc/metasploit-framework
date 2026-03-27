@@ -51,7 +51,7 @@ module Msf
     end
 
     # @param pwd [String] Password recovered from cracking an LM hash
-    # @param hash [String] NTLM hash for this password
+    # @param [Object] hash [String] NTLM hash for this password
     # @return [String] `pwd` converted to the correct case to match the
     #   given NTLM hash
     # @return [nil] if no case matches the NT hash. This can happen when
@@ -151,7 +151,7 @@ module Msf
 
     # This method determines if a given password hash already been cracked in the database
     #
-    # @param hash [String] password hash to check against the database
+    # @param [Object] hash [String] password hash to check against the database
     # @return [Boolean] if the password has been cracked in the db
     def password_cracked?(hash)
       framework.db.creds({ pass: hash }).each do |test_cred|

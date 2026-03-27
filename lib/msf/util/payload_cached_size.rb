@@ -93,7 +93,7 @@ class PayloadCachedSize
 
   # Insert or update the CachedSize value into a payload module file
   #
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @param cached_size [String, Integer] The new value for cached_size, which
   #   should be either an integer or the string ":dynamic"
   # @return [void]
@@ -113,7 +113,7 @@ class PayloadCachedSize
 
   # Insert or update the CachedSize value into a payload module file
   #
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @param stages_with_sizes [Array<{:stage => Msf::Payload::Stager, :size => Integer}>] Array of hashes with :stage (an Msf::Payload::Stager instance) and :size (Integer)
   # @return [void]
   def self.update_stager_cached_sizes(mod, stages_with_sizes)
@@ -133,7 +133,7 @@ class PayloadCachedSize
   # Updates the payload module specified with the current CachedSize
   #
   # @param framework [Msf::Framework] The Metasploit framework instance used for payload generation
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @return [String, Integer] The updated CachedSize value
   def self.update_module_cached_size(framework, mod)
     cached_size = compute_cached_size(framework, mod)
@@ -164,7 +164,7 @@ class PayloadCachedSize
 
   # Calculates the CachedSize value for a payload module
   #
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @return [Integer, String]
   def self.compute_cached_size(framework, mod)
     return ":dynamic" if is_dynamic?(framework, mod)
@@ -174,7 +174,7 @@ class PayloadCachedSize
 
   # Determines whether a payload generates a static sized output
   #
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @param generation_count [Integer] The number of iterations to use to
   #   verify that the size is static.
   # @return [Boolean]
@@ -197,7 +197,7 @@ class PayloadCachedSize
 
   # Determines whether a payload's CachedSize is up to date
   #
-  # @param mod [Msf::Payload] The class of the payload module to update
+  # @param [Object] mod [Msf::Payload] The class of the payload module to update
   # @return [Boolean]
   def self.is_cached_size_accurate?(framework, mod)
     return true if mod.dynamic_size? && is_dynamic?(framework, mod)
@@ -210,7 +210,7 @@ class PayloadCachedSize
   # Returns nil if the cache is correct, or a string describing the error if not.
   #
   # @param framework [Msf::Framework] The Metasploit framework instance used for payload generation
-  # @param mod [Msf::Payload] The payload module to check
+  # @param [Object] mod [Msf::Payload] The payload module to check
   # @return [String, nil] Error message if there is a problem, or nil if the cache is correct
   def self.cache_size_errors_for(framework, mod)
     is_payload_size_different_on_each_generation = is_dynamic?(framework,mod)
@@ -243,7 +243,7 @@ class PayloadCachedSize
   # Get a set of sane default options for the module so it can generate a
   # payload for size analysis.
   #
-  # @param mod [Msf::Payload] The class of the payload module to get options for
+  # @param [Object] mod [Msf::Payload] The class of the payload module to get options for
   # @return [Hash]
   def self.module_options(mod)
     opts = OPTS.clone

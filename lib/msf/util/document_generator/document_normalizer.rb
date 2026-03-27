@@ -166,7 +166,7 @@ module Msf
 
         # Returns the markdown format for module authors.
         #
-        # @param authors [Array, String] Module Authors
+        # @param [Object] authors [Array, String] Module Authors
         # @return [String]
         def normalize_authors(authors)
           if authors.kind_of?(Array)
@@ -254,7 +254,7 @@ module Msf
 
         # Returns a parsed demo ERB template.
         #
-        # @param mod [Msf::Module] Metasploit module.
+        # @param [Object] mod [Msf::Module] Metasploit module.
         # @param path [String] Template path.
         # @return [String]
         def load_demo_template(mod, path)
@@ -267,7 +267,7 @@ module Msf
 
         # Returns whether the module is a remote exploit or not.
         #
-        # @param mod [Msf::Module] Metasploit module.
+        # @param [Object] mod [Msf::Module] Metasploit module.
         # @return [TrueClass] Module is a remote exploit.
         # @return [FalseClass] Module is not really a remote exploit.
         def is_remote_exploit?(mod)
@@ -286,7 +286,7 @@ module Msf
         # BrowserExploitServer modules, HttpServer modules, local exploit modules, post
         # modules, payloads, auxiliary scanner modules.
         #
-        # @param mod [Msf::Module] Metasploit module.
+        # @param [Object] mod [Msf::Module] Metasploit module.
         # @return [String]
         def normalize_demo_output(mod)
           if mod.kind_of?(Msf::Exploit::Remote::BrowserExploitServer) && mod.shortname != 'browser_autopwn2'

@@ -79,9 +79,9 @@ module Metasploit
 
         # generate a signature from the authentication token, username, and password
         #
-        # @param auth_token [String] The authentication token retrieved by calling get_auth_token
+        # @param [Object] auth_token [String] The authentication token retrieved by calling get_auth_token
         # @param user [String] The username
-        # @param pass [String] The password
+        # @param [Object] pass [String] The password
         # @return [String] A hexadecimal string representation of the signature
         def generate_signature(auth_token, user, pass)
           Digest::MD5.hexdigest(auth_token + pass + auth_token + user + auth_token)
@@ -90,7 +90,7 @@ module Metasploit
         # the actual login method, called by #attempt_login
         #
         # @param user [String] The username to try
-        # @param pass [String] The password to try
+        # @param [Object] pass [String] The password to try
         # @return [Hash]
         #   * status [Metasploit::Model::Login::Status]
         #   * proof [String] the HTTP response body

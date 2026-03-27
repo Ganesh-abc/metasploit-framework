@@ -2593,7 +2593,7 @@ module Msf
           # grep [options] pattern other_cmd [other command's args], similar to the shell's grep [options] pattern file
           # however it also includes -k to keep lines && -s to skip lines.  grep -k 5 is useful for keeping table headers
           #
-          # @param args [Array<String>] Args to the grep command minimally including a pattern & a command to search
+          # @param [Object] args [Array<String>] Args to the grep command minimally including a pattern & a command to search
           # @return [String,nil] Results matching the regular expression given
 
           def cmd_grep(*args)
@@ -2841,9 +2841,9 @@ module Msf
           # Returns an array of lines at the provided line number plus any before and/or after lines requested
           # from all_lines by supplying the +before+ and/or +after+ parameters which are always positive
           #
-          # @param all_lines [Array<String>] An array of all lines being considered for matching
+          # @param [Object] all_lines [Array<String>] An array of all lines being considered for matching
           # @param line_num [Integer] The line number in all_lines which has satisfied the match
-          # @param after [Integer] The number of lines after the match line to include (should always be positive)
+          # @param [Object] after [Integer] The number of lines after the match line to include (should always be positive)
           # @param before [Integer] The number of lines before the match line to include (should always be positive)
           # @return [Array<String>] Array of lines including the line at line_num && any +before+ and/or +after+
 

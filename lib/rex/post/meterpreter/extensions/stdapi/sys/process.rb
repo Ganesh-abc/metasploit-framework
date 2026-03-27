@@ -108,9 +108,9 @@ class Process < Rex::Post::Process
   #
   # Executes an application using the arguments provided
   # @param path [String] Path on the remote system to the executable to run
-  # @param arguments [String,Array<String>] Arguments to the process. When passed as a String (rather than an array of Strings),
+  # @param [Object] arguments [String,Array<String>] Arguments to the process. When passed as a String (rather than an array of Strings),
   #                                         this is treated as a string containing all arguments.
-  # @param opts [Hash] Optional settings to parameterise the process launch
+  # @param [Object] opts [Hash] Optional settings to parameterise the process launch
   # @option Hidden [Boolean] Is the process launched without creating a visible window
   # @option Channelized [Boolean] The process is launched with pipes connected to a channel, e.g. for sending input/receiving output
   # @option Suspended [Boolean] Start the process suspended

@@ -3,7 +3,7 @@ module Rex::Crypto
   #
   # @deprecated Access via Rex::Crypto::Aes256
   # @param iv [String] Initialization vector.
-  # @param key [String] Secret key.
+  # @param [Object] key [String] Secret key.
   # @return [String] The encrypted string.
   def self.encrypt_aes256(iv, key, value)
     Aes256.encrypt_aes256(iv, key, value)
@@ -13,7 +13,7 @@ module Rex::Crypto
   #
   # @deprecated Access via Rex::Crypto::Aes256
   # @param iv [String] Initialization vector.
-  # @param key [String] Secret key.
+  # @param [Object] key [String] Secret key.
   # @return [String] The decrypted string.
   def self.decrypt_aes256(iv, key, value)
     Aes256.decrypt_aes256(iv, key, value)
@@ -22,7 +22,7 @@ module Rex::Crypto
   # Returns a decrypted or encrypted RC4 string.
   #
   # @deprecated Access via Rex::Crypto::Rc4
-  # @param key [String] Secret key.
+  # @param [Object] key [String] Secret key.
   # @param [String]
   def self.rc4(key, value)
     Rc4.rc4(key, value)

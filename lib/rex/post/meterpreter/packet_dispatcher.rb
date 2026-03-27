@@ -169,7 +169,7 @@ module PacketDispatcher
   # Sends a packet and waits for a timeout for the given time interval.
   #
   # @param packet [Packet] request to send
-  # @param timeout [Integer,nil] seconds to wait for response, or nil to ignore the
+  # @param [Object] timeout [Integer,nil] seconds to wait for response, or nil to ignore the
   #   response and return immediately
   # @return (see #send_packet_wait_response)
   def send_request(packet, timeout = self.response_timeout)
@@ -195,7 +195,7 @@ module PacketDispatcher
   # Transmits a packet and waits for a response.
   #
   # @param packet [Packet] the request packet to send
-  # @param timeout [Integer,nil] number of seconds to wait, or nil to wait
+  # @param [Object] timeout [Integer,nil] number of seconds to wait, or nil to wait
   #   forever
   def send_packet_wait_response(packet, timeout)
     if packet.type == PACKET_TYPE_REQUEST && commands.present?

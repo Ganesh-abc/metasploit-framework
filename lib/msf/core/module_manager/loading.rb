@@ -55,7 +55,7 @@ module Msf::ModuleManager::Loading
 
   # Return errors associated with the supplied reference name.
   #
-  # @param name [String] e.g. 'auxiliary/scanner/msmail/host_id'
+  # @param [Object] name [String] e.g. 'auxiliary/scanner/msmail/host_id'
   #   It may optionally be prefixed with a "<type>/", in which case we
   #   will pass it to `get_module_error(module_reference_name, type)`.
   #   Otherwise, we step through all sets until we find one that
@@ -95,7 +95,7 @@ module Msf::ModuleManager::Loading
   # @param class_or_module [Class<Msf::Module>, ::Module] either a module Class
   #   or a payload Module.
   # @param type [String] The module type.
-  # @param reference_name The module reference name.
+  # @param [Object] reference_name The module reference name.
   # @param info [Hash{String => Array}] additional information about the module
   # @option info [Array<String>] 'files' List of paths to the ruby source files
   #   where +class_or_module+ is defined.
@@ -178,7 +178,7 @@ module Msf::ModuleManager::Loading
 
   # Get a specific modules errors from the supplied module_reference_name and type
   #
-  # @param module_reference_name [String] e.g. 'scanner/msmail/host_id'
+  # @param [Object] module_reference_name [String] e.g. 'scanner/msmail/host_id'
   # @param type [String] this will be the type of module e.g. 'auxiliary'
   #
   # These @params will the be used to loop through `module_info_by_path` [Hash] to check for

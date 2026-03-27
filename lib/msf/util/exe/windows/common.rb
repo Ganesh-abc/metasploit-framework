@@ -89,8 +89,8 @@ module Msf::Util::EXE::Windows::Common
     # Set the default winpe DLL template. It will select the template based on the parameters provided including the size
     # architecture and an optional flavor. See data/templates/src/pe for template source code and build tools.
     #
-    # @param opts [Hash]
-    # @param arch The architecture, as one the predefined constants.
+    # @param [Object] opts [Hash]
+    # @param [Object] arch The architecture, as one the predefined constants.
     # @param size [Integer] The size of the payload.
     # @param flavor [Nil,String] An optional DLL flavor, one of 'mixed_mode' or 'dccw_gdiplus'
     def set_template_default_winpe_dll(opts, arch, size, flavor: nil)
@@ -123,7 +123,7 @@ module Msf::Util::EXE::Windows::Common
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param exe        [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option opts      [String] :msi_template_path
     # @option opts      [String] :msi_template
     # @return [String]
@@ -139,7 +139,7 @@ module Msf::Util::EXE::Windows::Common
     #self.replace_msi_buffer
     #
     # @param pe     [String]
-    # @param opts   [String]
+    # # @param [Object] opts   [String]
     # @option       [String] :msi_template
     # @option       [String] :msi_template_path
     # @return       [String]
@@ -244,7 +244,7 @@ module Msf::Util::EXE::Windows::Common
     #
     # @param framework  [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]    Unused
+    # # @param [Object] opts       [Hash]    Unused
     def to_vba(framework, code, opts = {})
       hash_sub = {}
       hash_sub[:var_myByte] = Rex::Text.rand_text_alpha(rand(3..9)).capitalize
@@ -275,7 +275,7 @@ module Msf::Util::EXE::Windows::Common
     # to_powershell_vba
     #
     # @param framework  [Msf::Framework]
-    # @param arch       [String]
+    # @param [Object] arch       [String]
     # @param code       [String]
     #
     def to_powershell_vba(framework, arch, code)
@@ -350,7 +350,7 @@ module Msf::Util::EXE::Windows::Common
     # to_exe_asp
     #
     # @param exes [String]
-    # @param opts [Hash]    Unused
+    # # @param [Object] opts [Hash]    Unused
     def to_exe_asp(exes = '', opts = {})
       hash_sub = {}
       hash_sub[:var_bytes] = Rex::Text.rand_text_alpha(rand(4..7)) # repeated a large number of times, so keep this one small
@@ -483,7 +483,7 @@ module Msf::Util::EXE::Windows::Common
     #
     # @see to_war
     # @param exe [String] Executable to drop and run.
-    # @param opts (see to_war)
+    # # @param [Object] opts (see to_war)
     # @option opts (see to_war)
     # @return (see to_war)
     def to_jsp_war(exe, opts = {})

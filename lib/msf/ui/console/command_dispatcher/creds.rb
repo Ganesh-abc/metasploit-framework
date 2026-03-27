@@ -198,7 +198,7 @@ class Creds
 
   # @param private_type [Symbol] See `Metasploit::Credential::Creation#create_credential`
   # @param username [String]
-  # @param password [String]
+  # @param [Object] password [String]
   # @param realm [String]
   # @param realm_type [String] A key in `Metasploit::Model::Realm::Key::SHORT_NAMES`
   def creds_add(*args)

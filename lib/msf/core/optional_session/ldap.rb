@@ -58,7 +58,7 @@ module Msf
       # Create a new LDAP connection using Rex::Proto::LDAP::Client.new and yield the
       # resulting connection object to the caller of this method.
       #
-      # @param opts [Hash] A hash containing the connection options for the
+      # @param [Object] opts [Hash] A hash containing the connection options for the
       #   LDAP connection to the target server.
       # @yieldparam ldap [Rex::Proto::LDAP::Client] The LDAP connection handle to use for connecting to
       #   the target LDAP server.

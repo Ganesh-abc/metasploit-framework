@@ -123,7 +123,7 @@ module Rex::Proto::Kerberos::CredentialCache
     # .... .... .... .... .... .... .... ..1. Flag 30: The flag 30 is SET
     # .... .... .... .... .... .... .... ...1 Flag 31: The flag 31 is SET
     #
-    # @param model The BinData object
+    # @param [Object] model The BinData object
     # @param [Integer, Nil] bit_length The length of desired byte output - number of dots in example above
     # @return [String] Formatted output
     def print_bin_data_model(model, bit_length: nil)

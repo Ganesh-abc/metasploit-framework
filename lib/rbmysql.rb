@@ -43,7 +43,7 @@ class RbMysql
     end
 
     # Make RbMysql object and connect to mysqld.
-    # @param args same as arguments for {#connect}.
+    # @param [Object] args same as arguments for {#connect}.
     # @return [RbMysql]
     def new(*args)
       my = self.init

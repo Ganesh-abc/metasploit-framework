@@ -26,7 +26,7 @@ module Msf::ModuleManager::Cache
   #
   # @param class_or_module [Class<Msf::Module>, ::Module] either a module Class
   #   or a payload Module.
-  # @param options [Hash{Symbol => String}]
+  # @param [Object] options [Hash{Symbol => String}]
   # @option options [String] :path the path to the file from which
   #   +class_or_module+ was loaded.
   # @option options [String] :reference_name the reference name for

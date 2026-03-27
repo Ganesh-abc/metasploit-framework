@@ -16,7 +16,7 @@ class PersistentStorage
   # array supplied as an argument is passed to the constructor of the
   # associated class as a means of generic initialization.
   #
-  # @param name [String] the name of the storage class.
+  # @param [Object] name [String] the name of the storage class.
   # @param params [Object] the parameters to give the new class.
   # @return [PersistentStorage] the newly created class.
   # @return [nil] if class has not been added through {.add_storage_class}.
@@ -61,7 +61,7 @@ class PersistentStorage
   # This method adds a new storage class to the hash of storage classes that
   # can be created through create.
   #
-  # @param name [String] the name of the storage class.
+  # @param [Object] name [String] the name of the storage class.
   # @param klass [PersistentStorage] the storage class to add.
   # @return [void]
   def self.add_storage_class(name, klass)

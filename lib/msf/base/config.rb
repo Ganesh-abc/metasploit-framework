@@ -280,7 +280,7 @@ class Config < Hash
   # the default path if one isn't specified.  The options should be group
   # references that have named value pairs.
   #
-  # @param opts [Hash] Hash containing configuration options.
+  # @param [Object] opts [Hash] Hash containing configuration options.
   # @option opts 'ConfigFile' [Hash] configuration file these options apply
   #   to.
   # @return [void]
@@ -522,7 +522,7 @@ class Config < Hash
   # the default path if one isn't specified.  The options should be group
   # references that have named value pairs.
   #
-  # @param opts [Hash] Hash containing configuration options.
+  # # @param [Object] opts [Hash] Hash containing configuration options.
   # @option opts 'ConfigFile' [Hash] configuration file these options apply
   #   to.
   # @return [void]

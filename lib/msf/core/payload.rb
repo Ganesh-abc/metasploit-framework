@@ -298,7 +298,7 @@ class Payload < Msf::Module
 
   #
   # Generates the payload and returns the raw buffer to the caller.
-  # @param opts [Hash]
+  # @param [Object] opts [Hash]
   def generate(opts = {})
     internal_generate(opts)
   end
@@ -623,8 +623,8 @@ protected
   # Blobs will be cached in the framework's PayloadSet
   #
   # @see PayloadSet#check_blob_cache
-  # @param asm [String] Assembly code to be assembled into a raw payload
-  # @param opts [Hash]
+  # @param [Object] asm [String] Assembly code to be assembled into a raw payload
+  # # @param [Object] opts [Hash]
   # @return [String] The final, assembled payload
   # @raise ArgumentError if +asm+ is blank
   def build(asm, off={}, opts = {})

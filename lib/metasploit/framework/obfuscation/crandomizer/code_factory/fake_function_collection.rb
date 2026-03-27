@@ -42,7 +42,7 @@ module Metasploit
 
             # Asks the FakeFunctionCollection if a function is available.
             #
-            # @param name [String]
+            # @param [Object] name [String]
             # @return [Boolean]
             def has_function_name?(name)
               functions.each do |f|

@@ -5,7 +5,7 @@ module Msf::DBManager::SessionEvent
 
   # Retrieves session events that are stored in the database.
   #
-  # @param opts [Hash] Hash containing query key-value pairs based on the session event model.
+  # @param [Object] opts [Hash] Hash containing query key-value pairs based on the session event model.
   # @option opts :id [Integer] A specific session event ID. If specified, all other options are ignored.
   #
   # Additional query options:

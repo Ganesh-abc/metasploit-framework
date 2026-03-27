@@ -25,7 +25,7 @@ module Rex
 
           # Initializes the PA-S4U-X509-USER structure
           #
-          # @param key [String] The encryption key
+          # @param [Object] key [String] The encryption key
           # @param impersonate [String] The impersonation principal name
           # @param impersonate_type [String] The impersonation principal name
           # @param realm [String] The realm

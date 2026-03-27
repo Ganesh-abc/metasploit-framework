@@ -28,7 +28,7 @@ module Msf
         #
         # Tab completion for a module's datastore names
         #
-        # @param mod [Msf::Module]
+        # @param [Object] mod [Msf::Module]
         # @param str [String] the string currently being typed before tab was hit
         # @param words [Array<String>] the previously completed words on the command
         #   line. `words` is always at least 1 when tab completion has reached this

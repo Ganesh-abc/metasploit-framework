@@ -12,7 +12,7 @@ module Msf::Util::EXE::OSX::Armle
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String]
     def to_osx_arm_macho(framework, code, opts = {})

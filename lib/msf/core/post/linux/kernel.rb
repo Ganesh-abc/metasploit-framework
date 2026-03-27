@@ -10,7 +10,7 @@ module Msf
         #
         # Returns uname output
         #
-        # @param opt [String] uname options, defaults to -a
+        # @param [Object] opt [String] uname options, defaults to -a
         # @return [String]
         # @raise [RuntimeError] If execution fails.
         #

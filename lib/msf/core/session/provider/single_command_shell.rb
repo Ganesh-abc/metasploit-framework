@@ -134,7 +134,7 @@ module SingleCommandShell
   # Explicitly run a single command and return the output.
   # This version uses a marker to denote the end of data (instead of a timeout).
   # @param cmd [String] The command to run (will have an echo statement appended to signify the end)
-  # @param timeout [Integer] The timeout in seconds for the command
+  # @param [Object] timeout [Integer] The timeout in seconds for the command
   # @param command_separator [String] A string to separate commands, for the given platform
   #
   def shell_command_token_base(cmd, timeout=10, command_separator="\n")

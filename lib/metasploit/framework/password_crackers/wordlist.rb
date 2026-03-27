@@ -88,7 +88,7 @@ module Metasploit
         validates :workspace,
                   presence: true
 
-        # @param attributes [Hash{Symbol => String,nil}]
+        # @param [Object] attributes [Hash{Symbol => String,nil}]
         def initialize(attributes={})
           attributes.each do |attribute, value|
             public_send("#{attribute}=", value)

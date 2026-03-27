@@ -12,7 +12,7 @@ include Msf::Util::EXE::Linux::Common
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_x64_elf(framework, code, opts = {})
@@ -24,7 +24,7 @@ include Msf::Util::EXE::Linux::Common
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_x64_elf_dll(framework, code, opts = {})
@@ -36,7 +36,7 @@ include Msf::Util::EXE::Linux::Common
       #
       # @param framework [Msf::Framework]
       # @param code       [String]
-      # @param opts       [Hash]
+      # # @param [Object] opts       [Hash]
       # @option           [String] :template
       # @return           [String] Returns an elf
       def to_linux_x64_elf(framework, code, opts = {})

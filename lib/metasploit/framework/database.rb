@@ -19,7 +19,7 @@ module Metasploit
 
       # Returns first configuration pathname from configuration_pathnames or the overriding `:path`.
       #
-      # @param options [Hash{Symbol=>String}]
+      # @param [Object] options [Hash{Symbol=>String}]
       # @option options [String] :path Path to use instead of first element of configurations_pathnames
       # @return [Pathname] if configuration pathname exists.
       # @return [nil] if configuration pathname does not exist.

@@ -12,7 +12,7 @@ module Msf::DBManager::Report
   end
 
   # Creates a ReportArtifact based on passed parameters.
-  # @param opts [Hash] of ReportArtifact attributes
+  # @param [Object] opts [Hash] of ReportArtifact attributes
   def report_artifact(opts)
     return if not active
 
@@ -52,7 +52,7 @@ module Msf::DBManager::Report
 
   # Creates a Report based on passed parameters. Does not handle
   # child artifacts.
-  # @param opts [Hash]
+  # # @param [Object] opts [Hash]
   # @return [Integer] ID of created report
   def report_report(opts)
     return if not active

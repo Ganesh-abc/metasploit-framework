@@ -23,8 +23,8 @@ module Msf::Sessions
     end
 
     # Convert the executable and argument array to a commandline that can be passed to CreateProcessAsUserW.
-    # @param args [Array<String>] The arguments to the process
-    # @remark The difference between this and `to_cmd` is that the output of `to_cmd` is expected to be passed
+    # @param [Object] args [Array<String>] The arguments to the process
+    # @note The difference between this and `to_cmd` is that the output of `to_cmd` is expected to be passed
     #         to cmd.exe, whereas this is expected to be passed directly to the Win32 API, anticipating that it
     #         will in turn be interpreted by CommandLineToArgvW.
     def argv_to_commandline(args)
@@ -34,7 +34,7 @@ module Msf::Sessions
     end
 
     # Escape an individual argument per Windows shell rules
-    # @param arg [String] Shell argument
+    # @param [Object] arg [String] Shell argument
     def escape_arg(arg)
       needs_quoting = space_chars.any? { |char| arg.include?(char) }
 

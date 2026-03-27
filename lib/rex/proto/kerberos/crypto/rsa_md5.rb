@@ -7,7 +7,7 @@ module Rex
         class RsaMd5
           # The MD5 checksum of the data
           #
-          # @param key [String] ignored for this checksum type
+          # @param [Object] key [String] ignored for this checksum type
           # @param msg_type [Integer] ignored for this checksum type
           # @param data [String] the data to checksum
           # @return [String] the generated checksum

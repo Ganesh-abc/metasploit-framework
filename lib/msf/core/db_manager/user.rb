@@ -71,7 +71,7 @@ module Msf::DBManager::User
   # Update the attributes of a user entry with the values in opts.
   # The values in opts should match the attributes to update.
   #
-  # @param opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
+  # @param [Object] opts [Hash] Hash containing the updated values. Key should match the attribute to update. Must contain :id of record to update.
   # @return [Mdm::User] The updated Mdm::User object.
   def update_user(opts)
     ::ApplicationRecord.connection_pool.with_connection {
@@ -85,7 +85,7 @@ module Msf::DBManager::User
 
   # Deletes user entries based on the IDs passed in.
   #
-  # @param opts[:ids] [Array] Array containing Integers corresponding to the IDs of the user entries to delete.
+  # # @param [Object] opts[:ids] [Array] Array containing Integers corresponding to the IDs of the user entries to delete.
   # @return [Array] Array containing the Mdm::User objects that were successfully deleted.
   def delete_user(opts)
     raise ArgumentError.new("The following options are required: :ids") if opts[:ids].nil?
@@ -108,8 +108,8 @@ module Msf::DBManager::User
 
   # Authenticates the user.
   #
-  # @param opts[:ids] [Integer] ID of the user to authenticate.
-  # @param opts[:password] [String] The user's password.
+  # # @param [Object] opts[:ids] [Integer] ID of the user to authenticate.
+  # # @param [Object] opts[:password] [String] The user's password.
   # @return [Boolean] True if the user is successfully authenticated; otherwise, false.
   def authenticate_user(opts)
     raise ArgumentError.new("The following options are required: :id") if opts[:id].nil?
@@ -126,10 +126,10 @@ module Msf::DBManager::User
   # Creates a new API token for the user.
   #
   # The opts parameter MUST contain:
-  # @param opts[:ids] [Integer] ID for the user.
+  # # @param [Object] opts[:ids] [Integer] ID for the user.
   #
   # The opts parameter can contain:
-  # @param opts[:token_length] [Integer] Token length.
+  # # @param [Object] opts[:token_length] [Integer] Token length.
   #
   # @return [String] The new API token.
   def create_new_user_token(opts)

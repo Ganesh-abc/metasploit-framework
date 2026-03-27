@@ -1014,7 +1014,7 @@ class Console::CommandDispatcher::Core
   #
   # Migrates the server to the supplied process identifier.
   #
-  # @param args [Array<String>] Commandline arguments, -h or a pid. On linux
+  # @param [Object] args [Array<String>] Commandline arguments, -h or a pid. On linux
   #   platforms a path for the unix domain socket used for IPC.
   # @return [void]
   def cmd_migrate(*args)

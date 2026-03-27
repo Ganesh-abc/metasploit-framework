@@ -73,7 +73,7 @@ module Metasploit
         # Actually doing the login. Called by #attempt_login
         #
         # @param username [String] The username to try
-        # @param password [String] The password to try
+        # @param [Object] password [String] The password to try
         # @return [Hash]
         #   * :status [Metasploit::Model::Login::Status]
         #   * :proof [String] the HTTP response body

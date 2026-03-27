@@ -78,7 +78,7 @@ module Msf::Payload::Java
   # Like {#generate_jar}, this method is used by stagers to create a war file
   # as a Rex::Zip::Jar object.
   #
-  # @param opts [Hash]
+  # @param [Object] opts [Hash]
   # @option :app_name [String] Name of the \<servlet-name> attribute in the
   #   web.xml.  Defaults to random
   #

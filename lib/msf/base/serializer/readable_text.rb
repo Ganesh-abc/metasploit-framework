@@ -17,7 +17,7 @@ class ReadableText
   # Returns a formatted string that contains information about
   # the supplied module instance.
   #
-  # @param mod [Msf::Module] the module to dump information for.
+  # @param [Object] mod [Msf::Module] the module to dump information for.
   # @param indent [String] the indentation to use.
   # @return [String] formatted text output of the dump.
   def self.dump_module(mod, indent = "  ")
@@ -43,7 +43,7 @@ class ReadableText
 
   # Dumps an exploit's targets.
   #
-  # @param mod [Msf::Exploit] the exploit module to dump targets
+  # @param [Object] mod [Msf::Exploit] the exploit module to dump targets
   #   for.
   # @param indent [String] the indentation to use (only the length
   #   matters).
@@ -109,7 +109,7 @@ class ReadableText
 
   # Dumps the exploit's selected target
   #
-  # @param mod [Msf::Exploit] the exploit module.
+  # @param [Object] mod [Msf::Exploit] the exploit module.
   # @param indent [String] the indentation to use (only the length
   #   matters)
   # @param h [String] the string to display as the table heading.
@@ -131,7 +131,7 @@ class ReadableText
 
   # Dumps the evasion module's selected target
   #
-  # @param mod [Msf::Evasion] The evasion module.
+  # @param [Object] mod [Msf::Evasion] The evasion module.
   # @param indent [String] The indentation to use (only the length matters)
   # @param h [String] The string to display as the table heading.
   # @return [String] The strong form of the table.
@@ -152,7 +152,7 @@ class ReadableText
 
   # Dumps a module's actions
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use (only the length
   #   matters)
   # @param h [String] the string to display as the table heading.
@@ -188,7 +188,7 @@ class ReadableText
 
   # Dumps the module's selected action
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use (only the length
   #   matters)
   # @param h [String] the string to display as the table heading.
@@ -265,7 +265,7 @@ class ReadableText
 
   # Dumps information about an exploit module.
   #
-  # @param mod [Msf::Exploit] the exploit module.
+  # @param [Object] mod [Msf::Exploit] the exploit module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_exploit_module(mod, indent = '')
@@ -331,7 +331,7 @@ class ReadableText
 
   # Dumps information about an auxiliary module.
   #
-  # @param mod [Msf::Auxiliary] the auxiliary module.
+  # @param [Object] mod [Msf::Auxiliary] the auxiliary module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_auxiliary_module(mod, indent = '')
@@ -384,7 +384,7 @@ class ReadableText
 
   # Dumps information about a post module.
   #
-  # @param mod [Msf::Post] the post module.
+  # @param [Object] mod [Msf::Post] the post module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_post_module(mod, indent = '')
@@ -442,7 +442,7 @@ class ReadableText
 
   # Dumps information about an evasion module.
   #
-  # @param mod [Msf::Evasion] The evasion module instance.
+  # @param [Object] mod [Msf::Evasion] The evasion module instance.
   # @param indent [String] The indentation to use.
   # @return [String] The string form of the information
   def self.dump_evasion_module(mod, indent = '')
@@ -486,7 +486,7 @@ class ReadableText
 
   # Dumps information about a payload module.
   #
-  # @param mod [Msf::Payload] the payload module.
+  # @param [Object] mod [Msf::Payload] the payload module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_payload_module(mod, indent = '')
@@ -524,7 +524,7 @@ class ReadableText
 
   # Dumps information about a module, just the basics.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_basic_module(mod, indent = '')
@@ -564,7 +564,7 @@ class ReadableText
   # Dumps the list of options associated with the
   # supplied module.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @param missing [Boolean] dump only empty required options.
   # @return [String] the string form of the information.
@@ -611,8 +611,8 @@ class ReadableText
   # Creates the table for the given module options
   #
   # @param missing [Boolean] dump only empty required options.
-  # @param mod [Msf::Module] the module.
-  # @param options [Array<Msf::OptBase>] The options to be added to the table
+  # @param [Object] mod [Msf::Module] the module.
+  # @param [Object] options [Array<Msf::OptBase>] The options to be added to the table
   # @param indent [String] the indentation to use.
   #
   # @return [String] the string form of the table.
@@ -659,7 +659,7 @@ class ReadableText
 
   # Dumps the advanced options associated with the supplied module.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_advanced_options(mod, indent = '')
@@ -668,7 +668,7 @@ class ReadableText
 
   # Dumps the evasion options associated with the supplied module.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_evasion_options(mod, indent = '')
@@ -677,7 +677,7 @@ class ReadableText
 
   # Dumps the references associated with the supplied module.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_references(mod, indent = '')
@@ -704,7 +704,7 @@ class ReadableText
 
   # Dumps the notes associated with the supplied module.
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation to use.
   # @return [String] the string form of the information.
   def self.dump_notes(mod, indent = '')
@@ -748,7 +748,7 @@ class ReadableText
 
   # Dumps the contents of a datastore.
   #
-  # @param name [String] displayed as the table header.
+  # @param [Object] name [String] displayed as the table header.
   # @param ds [Msf::DataStore] the DataStore to dump.
   # @param indent [Integer] the indentation size.
   # @param col [Integer] the column width.
@@ -773,7 +773,7 @@ class ReadableText
   # Dumps the list of sessions.
   #
   # @param framework [Msf::Framework] the framework to dump.
-  # @param opts [Hash] the options to dump with.
+  # @param [Object] opts [Hash] the options to dump with.
   # @option opts :verbose [Boolean] gives more information if set to
   #   true.
   # @option opts :indent [Integer] set the indentation amount.
@@ -921,7 +921,7 @@ class ReadableText
   # Dumps the list of active sessions in verbose mode
   #
   # @param framework [Msf::Framework] the framework to dump.
-  # @param opts [Hash] the options to dump with.
+  # # @param [Object] opts [Hash] the options to dump with.
   # @return [String] the formatted list of sessions.
   def self.dump_sessions_verbose(framework, opts={})
     out = "Active sessions\n" +
@@ -1080,7 +1080,7 @@ class ReadableText
 
   # Dumps the module description
   #
-  # @param mod [Msf::Module] the module.
+  # @param [Object] mod [Msf::Module] the module.
   # @param indent [String] the indentation string
   # @return [String] the string description
   def self.dump_description(mod, indent)

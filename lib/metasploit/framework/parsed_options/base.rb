@@ -50,7 +50,7 @@ class Metasploit::Framework::ParsedOptions::Base
 
   # Translates {#options} to the `application`'s config
   #
-  # @param application [Rails::Application]
+  # @param [Object] application [Rails::Application]
   # @return [void]
   def configure(application)
     application.config['config/database'] = options.database.config

@@ -36,7 +36,7 @@ class RFTransceiver < Extension
 
   # Sets the frequency
   # @param idx [Integer] HW Index
-  # @param opt [Hash] Optional: "mhz" => 24
+  # @param [Object] opt [Hash] Optional: "mhz" => 24
   # @param freq [Integer] Frequency to set
   def set_freq(idx, freq, opt={})
     request = "/rftransceiver/#{idx}/set_freq?freq=#{freq}"
@@ -53,14 +53,14 @@ class RFTransceiver < Extension
 
   # Sets the mode
   # @param idx [Integer] HW Index
-  # @param mode [String] Either RX, TX or IDLE
+  # @param [Object] mode [String] Either RX, TX or IDLE
   def set_mode(idx, mode)
     client.send_request("/rftransceiver/#{idx}/set_mode?mode=#{mode}")
   end
 
   # Sets the modulation value
   # @param idx [Integer] HW Index
-  # @param mod [String] Modulation Technique
+  # @param [Object] mod [String] Modulation Technique
   def set_modulation(idx, mod)
     client.send_request("/rftransceiver/#{idx}/set_modulation?mod=#{mod}")
   end
@@ -82,7 +82,7 @@ class RFTransceiver < Extension
   # Transmits data
   # @param idx [Integer] HW Index
   # @param data [String] Data to transmit
-  # @param opt [Hash] Optional parameters: "repeat" => Integer, "offset" => Integer
+  # @param [Object] opt [Hash] Optional parameters: "repeat" => Integer, "offset" => Integer
   def rfxmit(idx, data, opt={})
     data = Base64.urlsafe_encode64(data)
     request = "/rftransceiver/#{idx}/rfxmit?data=#{data}"
@@ -93,7 +93,7 @@ class RFTransceiver < Extension
 
   # Receives a packet
   # @param idx [Integer] HW Index
-  # @param opt [Hash] Optional parameters: "timeout" => Integer, "blocksize" => Integer
+  # @param [Object] opt [Hash] Optional parameters: "timeout" => Integer, "blocksize" => Integer
   # @return [Hash] "data" => <received data> "timestamp" => When it was received
   def rfrecv(idx, opt={})
     request = "/rftransceiver/#{idx}/rfrecv"

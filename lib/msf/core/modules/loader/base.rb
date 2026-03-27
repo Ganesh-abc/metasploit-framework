@@ -345,7 +345,7 @@ class Msf::Modules::Loader::Base
   # module's classes. The wrapper module must be named so that active_support's autoloading code doesn't break when
   # searching constants from inside the Metasploit class.
   #
-  # @param namespace_module_names [Array<String>]
+  # @param [Object] namespace_module_names [Array<String>]
   #   {NAMESPACE_MODULE_NAMES} + <derived-constant-safe names>
   # @return [Module] module that can wrap the module content from {#read_module_content} using
   #   module_eval_with_lexical_scope.
@@ -457,7 +457,7 @@ class Msf::Modules::Loader::Base
   #
   # @param parent_path (see #load_module)
   # @param type (see #load_module)
-  # @param module_reference_name (see #load_module)
+  # @param [Object] module_reference_name (see #load_module)
   # @return [String] The path to module.
   def module_path(parent_path, type, module_reference_name)
     raise ::NotImplementedError
@@ -582,7 +582,7 @@ class Msf::Modules::Loader::Base
   #
   # @param parent_path (see #load_module)
   # @param type (see #load_module)
-  # @param module_reference_name (see #load_module)
+  # @param [Object] module_reference_name (see #load_module)
   # @return [String] module content that can be module_evaled into the {#create_namespace_module}
   def read_module_content(parent_path, type, module_reference_name)
     raise ::NotImplementedError

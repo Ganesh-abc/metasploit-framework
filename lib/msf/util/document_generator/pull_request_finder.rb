@@ -49,7 +49,7 @@ module Msf
 
         # Returns pull requests associated with a particular Metasploit module.
         #
-        # @param mod [Msf::Module] Metasploit module.
+        # @param [Object] mod [Msf::Module] Metasploit module.
         # @return [Hash]
         def search(mod)
           file_name = get_normalized_module_name(mod)
@@ -63,7 +63,7 @@ module Msf
 
         # Returns the normalized module full name.
         #
-        # @param mod [Msf::Module] Metasploit module.
+        # @param [Object] mod [Msf::Module] Metasploit module.
         # @return [String]
         def get_normalized_module_name(mod)
           source_fname = mod.method(:initialize).source_location.first

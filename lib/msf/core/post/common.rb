@@ -54,9 +54,9 @@ module Msf::Post::Common
 
   # Create a new process, receiving the program's output
   # @param executable [String] The path to the executable; either absolute or relative to the session's current directory
-  # @param args [Array<String>] The arguments to the executable
-  # @param timeout [Integer] Number of seconds before the call will time out
-  # @param opts [Hash] Optional settings to parameterise the process launch
+  # @param [Object] args [Array<String>] The arguments to the executable
+  # @param [Object] timeout [Integer] Number of seconds before the call will time out
+  # @param [Object] opts [Hash] Optional settings to parameterise the process launch
   # @option Hidden [Boolean] Is the process launched without creating a visible window
   # @option Channelized [Boolean] The process is launched with pipes connected to a channel, e.g. for sending input/receiving output
   # @option Suspended [Boolean] Start the process suspended
@@ -319,7 +319,7 @@ module Msf::Post::Common
   # to determine if the execution was successful or not.
   #
   # @param [String] cmd The command to execute
-  # @param args [String] The optional arguments of the command (can de included in +cmd+ instead)
+  # @param [Object] args [String] The optional arguments of the command (can de included in +cmd+ instead)
   # @param [Integer] timeout The time in sec. to wait before giving up
   # @param [Hash] opts An Hash of options (see {#cmd_exec})
   # @return [Array(String, Boolean)] Array containing the output string

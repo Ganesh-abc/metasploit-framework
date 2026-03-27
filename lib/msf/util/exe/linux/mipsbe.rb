@@ -13,7 +13,7 @@ module Msf::Util::EXE::Linux::Mipsbe
     #
     # @param framework [Msf::Framework]
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String] Returns an elf
     def to_linux_mipsbe_elf(framework, code, opts = {})

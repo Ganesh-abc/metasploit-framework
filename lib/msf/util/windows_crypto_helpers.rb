@@ -59,7 +59,7 @@ module WindowsCryptoHelpers
   # has been taken from Credump
   #
   # @param secret [String] The secret to decrypt
-  # @param key [String] The key to decrypt the secret
+  # @param [Object] key [String] The key to decrypt the secret
   # @return [String] The decrypted data
   def decrypt_secret_data(secret, key)
 
@@ -141,7 +141,7 @@ module WindowsCryptoHelpers
   # @param rid [String] The user RID
   # @param hboot_key [String] The hashedBootKey
   # @param enc_hash [String] The encrypted hash
-  # @param pass [String] The password used for revision 1 hashes
+  # @param [Object] pass [String] The password used for revision 1 hashes
   # @param default [String] The default hash to return if something goes wrong
   # @return [String] The decrypted NT or LM hash
   def decrypt_user_hash(rid, hboot_key, enc_hash, pass, default)
@@ -234,7 +234,7 @@ module WindowsCryptoHelpers
   # 16.
   #
   # @param edata [String] The cipher to decrypt
-  # @param key [String] The key used to decrypt
+  # @param [Object] key [String] The key used to decrypt
   # @param iv [String] The IV
   # @return [String, nil] The decrypted plaintext or nil if the key size is not supported
   def decrypt_aes(edata, key, iv)
@@ -271,7 +271,7 @@ module WindowsCryptoHelpers
   # Decrypt encrypted cached entry from HKLM\Security\Cache\NL$XX
   #
   # @param edata [String] The encrypted hash entry to decrypt
-  # @param key [String] The key used to decrypt
+  # @param [Object] key [String] The key used to decrypt
   # @param iv [String] The IV
   # @return [String, nil] The decrypted plaintext or nil if the key size is not supported
   def decrypt_hash(edata, key, iv)
@@ -331,7 +331,7 @@ module WindowsCryptoHelpers
   # http://web.mit.edu/kerberos/krb5-latest/doc/admin/enctypes.html?highlight=des#enctype-compatibility
   #
   # @param raw_secret [String] The data to encrypt
-  # @param key [String] The salt used by the encryption algorithm
+  # @param [Object] key [String] The salt used by the encryption algorithm
   # @return [String, nil] The encrypted data
   def des_cbc_md5(raw_secret, salt)
     odd = true
@@ -371,9 +371,9 @@ module WindowsCryptoHelpers
   # Encrypt using MIT Kerberos aesXXX-cts-hmac-sha1-96
   # http://web.mit.edu/kerberos/krb5-latest/doc/admin/enctypes.html?highlight=des#enctype-compatibility
   #
-  # @param algorithm [String] The AES algorithm to use (e.g. `128-CBC` or `256-CBC`)
+  # @param [Object] algorithm [String] The AES algorithm to use (e.g. `128-CBC` or `256-CBC`)
   # @param raw_secret [String] The data to encrypt
-  # @param key [String] The salt used by the encryption algorithm
+  # @param [Object] key [String] The salt used by the encryption algorithm
   # @return [String, nil] The encrypted data
   def aes_cts_hmac_sha1_96(algorithm, raw_secret, salt)
     iterations = 4096

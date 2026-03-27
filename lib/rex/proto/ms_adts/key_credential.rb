@@ -17,7 +17,7 @@ module Rex::Proto::MsAdts
 
     # Set the key material for this credential object
     # @param public_key [OpenSSL::PKey::RSA] Public key used for authentication
-    # @param key_usage [Enumeration] From the KEY_USAGE constants in this class
+    # @param [Object] key_usage [Enumeration] From the KEY_USAGE constants in this class
     def set_key(public_key, key_usage)
       self.key_usage = key_usage
 

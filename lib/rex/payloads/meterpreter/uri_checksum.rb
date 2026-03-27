@@ -120,7 +120,7 @@ module Rex
 
         # Return the numerical checksum for a given mode symbol
         #
-        # @param mode [Symbol] The mode symbol to lookup (:connect, :init_native, :init_python, :init_java)
+        # @param [Object] mode [Symbol] The mode symbol to lookup (:connect, :init_native, :init_python, :init_java)
         # @return [Integer] The URI checksum value corresponding with the mode
         def uri_checksum_lookup(mode)
           sum = URI_CHECKSUM_MODES.keys.select{|ksum| URI_CHECKSUM_MODES[ksum] == mode}.first

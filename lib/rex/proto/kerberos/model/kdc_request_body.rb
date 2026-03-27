@@ -110,7 +110,7 @@ module Rex
           # Makes a checksum from the Rex::Proto::Kerberos::Model::KdcRequestBody
           #
           # @param etype [Integer] the crypto schema to checksum
-          # @param key [String] the key used as the HMAC secret (applicable to most but not all checksum algorithms)
+          # @param [Object] key [String] the key used as the HMAC secret (applicable to most but not all checksum algorithms)
           # @return [String] the checksum
           # @raise [NotImplementedError] if the encryption schema isn't supported
           def checksum(etype, key, key_usage)

@@ -108,7 +108,7 @@ module Rex
         #
         # Create an arbitrary HTTP request
         #
-        # @param opts [Hash]
+        # @param [Object] opts [Hash]
         # @option opts 'agent'         [String] User-Agent header value
         # @option opts 'connection'    [String] Connection header value
         # @option opts 'cookie'        [String] Cookie header value
@@ -268,7 +268,7 @@ module Rex
         # we return the original response object
         #
         # @param res [Response] the HTTP Response object
-        # @param opts [Hash] the options used to generate the original HTTP request
+        # # @param [Object] opts [Hash] the options used to generate the original HTTP request
         # @param t [Integer] the timeout for the request in seconds
         # @param persist [Boolean] whether or not to persist the TCP connection (pipelining)
         #
@@ -349,7 +349,7 @@ module Rex
         end
         # Send a series of requests to complete Digest Authentication
         #
-        # @param opts [Hash] the options used to build an HTTP request
+        # # @param [Object] opts [Hash] the options used to build an HTTP request
         # @return [Response] the last valid HTTP response we received
         def digest_auth(opts = {})
           to = opts['timeout'] || 20

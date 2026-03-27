@@ -59,7 +59,7 @@ module Metasploit
         presence: true,
         if: -> { private.nil? or paired }
 
-      # @param attributes [Hash{Symbol => String,nil}]
+      # @param [Object] attributes [Hash{Symbol => String,nil}]
       def initialize(attributes={})
         attributes.each do |attribute, value|
           public_send("#{attribute}=", value)

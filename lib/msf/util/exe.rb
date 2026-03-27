@@ -52,11 +52,11 @@ module Msf::Util::EXE
     # to_executable
     #
     # @param framework [Msf::Framework]
-    # @param arch     [String]
+    # @param [Object] arch     [String]
     # @param plat     [String]
     # @param code     [String]
     # @param fmt      [String]
-    # @param opts     [Hash]
+    # @param [Object] opts     [Hash]
     def to_executable(framework, arch, plat, code = '', fmt='', opts = {})
       # This code handles mettle stageless when LinuxMinKernel is 2.4+ because the code will be a elf or macho.
       if elf?(code) || macho?(code)
@@ -87,7 +87,7 @@ module Msf::Util::EXE
     # <payload>)
     #
     # @param framework [Framework]
-    # @param arch [String] Architecture for the target format; one of the ARCH_*
+    # @param [Object] arch [String] Architecture for the target format; one of the ARCH_*
     # constants
     # @param plat [#index] platform
     # @param code [String] The shellcode for the resulting executable to run
@@ -316,7 +316,7 @@ module Msf::Util::EXE
     # encode_stub
     #
     # @param framework [Msf::Framework]
-    # @param arch     [String]
+    # @param [Object] arch     [String]
     # @param code     [String]
     # @param platform [String]
     # @param badchars [String]

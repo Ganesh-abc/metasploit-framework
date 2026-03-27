@@ -571,7 +571,7 @@ module Msf::Post::File
   # Sets the permissions on a remote file
   #
   # @param path [String] Path on the remote filesystem
-  # @param mode [Fixnum] Mode as an octal number
+  # @param [Object] mode [Fixnum] Mode as an octal number
   def chmod(path, mode = 0o700)
     if session.platform == 'windows'
       raise "`chmod' method does not support Windows systems"

@@ -33,17 +33,17 @@ module Msf::RPC::JSON
 
     # Instantiate a Request.
     # @param uri [URI::HTTP] the JSON-RPC service URI
-    # @param api_token [String] the API token. Default: nil
+    # @param [Object] api_token [String] the API token. Default: nil
     # @param method [String] the JSON-RPC method name.
     # @param params [Array, Hash] the JSON-RPC method parameters. Default: nil
-    # @param namespace [String] the namespace for the JSON-RPC method. The namespace will
+    # @param [Object] namespace [String] the namespace for the JSON-RPC method. The namespace will
     #   be prepended to the method name with a period separator. Default: nil
     # @param symbolize_names [Boolean] If true, symbols are used for the names (keys) when
     #   processing JSON objects; otherwise, strings are used. Default: true
     # @param is_notification [Boolean] If true, the request is created as a notification;
     #   otherwise, a standard request. Default: false
     # @param private_key_file [String] the SSL private key file used for the HTTPS request. Default: nil
-    # @param cert_chain_file [String] the SSL cert chain file used for the HTTPS request. Default: nil
+    # @param [Object] cert_chain_file [String] the SSL cert chain file used for the HTTPS request. Default: nil
     # @param verify_peer [Boolean] indicates whether a server should request a certificate
     #   from a peer, to be verified by user code. Default: nil
     def initialize(uri, api_token: nil, method:, params: nil, namespace: nil,
@@ -197,15 +197,15 @@ module Msf::RPC::JSON
   class Notification < Request
     # Instantiate a Notification.
     # @param uri [URI::HTTP] the JSON-RPC service URI
-    # @param api_token [String] the API token. Default: nil
+    # @param [Object] api_token [String] the API token. Default: nil
     # @param method [String] the JSON-RPC method name.
     # @param params [Array, Hash] the JSON-RPC method parameters. Default: nil
-    # @param namespace [String] the namespace for the JSON-RPC method. The namespace will
+    # @param [Object] namespace [String] the namespace for the JSON-RPC method. The namespace will
     #   be prepended to the method name with a period separator. Default: nil
     # @param symbolize_names [Boolean] If true, symbols are used for the names (keys) when
     #   processing JSON objects; otherwise, strings are used. Default: true
     # @param private_key_file [String] the SSL private key file used for the HTTPS request. Default: nil
-    # @param cert_chain_file [String] the SSL cert chain file used for the HTTPS request. Default: nil
+    # @param [Object] cert_chain_file [String] the SSL cert chain file used for the HTTPS request. Default: nil
     # @param verify_peer [Boolean] indicates whether a server should request a certificate
     #   from a peer, to be verified by user code. Default: nil
     def initialize(uri, api_token: nil, method:, params: nil, namespace: nil,

@@ -44,7 +44,7 @@ class Server
   # Create DNS Server
   #
   # @param lhost [String] Listener address
-  # @param lport [Fixnum] Listener port
+  # @param [Integer] lport [Fixnum] Listener port
   # @param udp [TrueClass, FalseClass] Listen on UDP socket
   # @param tcp [TrueClass, FalseClass] Listen on TCP socket
   # @param res [Rex::Proto::DNS::Resolver] Resolver to use, nil to create a fresh one

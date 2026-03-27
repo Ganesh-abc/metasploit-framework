@@ -15,7 +15,7 @@ module Rex
 
           # Derive an encryption key based on a password and salt for the given cipher type
           #
-          # @param password [String] The password to use as the basis for key generation
+          # @param [Object] password [String] The password to use as the basis for key generation
           # @param salt [String] Ignored for this encryption algorithm
           # @param params [String] Unused for this encryption type
           # @return [String] The derived key
@@ -28,7 +28,7 @@ module Rex
 
           # Use this class's encryption routines to create a checksum of the data based on the key and message type
           #
-          # @param key [String] the key to use to generate the checksum
+          # @param [Object] key [String] the key to use to generate the checksum
           # @param msg_type [Integer] type of kerberos message
           # @param data [String] the data to checksum
           # @return [String] the generated checksum
@@ -43,7 +43,7 @@ module Rex
           # https://datatracker.ietf.org/doc/rfc4757/
           #
           # @param ciphertext [String] the data to decrypt
-          # @param key [String] the key to decrypt
+          # @param [Object] key [String] the key to decrypt
           # @param msg_type [Integer] type of kerberos message
           # @return [String] the decrypted cipher
           # @raise [Rex::Proto::Kerberos::Model::Error::KerberosError] if decryption doesn't succeed
@@ -80,7 +80,7 @@ module Rex
           # https://datatracker.ietf.org/doc/rfc4757/
           #
           # @param plaintext [String] the data to encrypt
-          # @param key [String] the key to encrypt
+          # @param [Object] key [String] the key to encrypt
           # @param msg_type [Integer] type of kerberos message
           # @param confounder [String] Optionally force the confounder to a specific value
           # @return [String] the encrypted data

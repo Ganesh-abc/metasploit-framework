@@ -83,7 +83,7 @@ module Metasploit
 
           validate :validate_cred_details
 
-          # @param attributes [Hash{Symbol => String,nil}]
+          # @param [Object] attributes [Hash{Symbol => String,nil}]
           def initialize(attributes={})
             attributes.each do |attribute, value|
               public_send("#{attribute}=", value)

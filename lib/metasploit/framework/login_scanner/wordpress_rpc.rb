@@ -48,7 +48,7 @@ module Metasploit
 
         # This method generates the XML data for the RPC login request
         # @param user [String] the username to authenticate with
-        # @param pass [String] the password to authenticate with
+        # @param [Object] pass [String] the password to authenticate with
         # @return [String] the generated XML body for the request
         def generate_xml_request(user, pass)
           xml = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>"

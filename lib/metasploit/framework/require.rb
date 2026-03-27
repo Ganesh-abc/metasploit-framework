@@ -12,7 +12,7 @@ module Metasploit
       # `Kernel#warn`, along with instructions for reinstalling the bundle.  If a `LoadError` does not occur, then
       # `with_block` is called.
       #
-      # @param name [String] the name of the library to `Kernel#require`.
+      # @param [Object] name [String] the name of the library to `Kernel#require`.
       # @param without_warning [String] warning to print if `name` cannot be required.
       # @yield block to run when `name` requires successfully
       # @yieldreturn [void]

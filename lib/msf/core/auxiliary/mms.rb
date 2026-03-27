@@ -46,7 +46,7 @@ module Msf
     # @param phone_numbers [<String>Array] An array of numbers of try (of the same carrier)
     # @param subject [String] MMS subject
     # @param message [String] The text to send.
-    # @param attachment_path [String] Optional
+    # @param [Object] attachment_path [String] Optional
     # @param ctype [String] Optional
     #
     # @return [void]

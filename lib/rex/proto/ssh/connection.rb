@@ -76,7 +76,7 @@ class Connection < ::HrrRbSsh::Connection
   # Creates a default empty handler set for channel requests.
   #
   # @param io [IO] Socket, FD, or abstraction on which to build Connection
-  # @param options [Hash] Options for constructing Connection components
+  # @param [Object] options [Hash] Options for constructing Connection components
   #
   # @return [Rex::Proto::Ssh::Connection] a new connection object
   def initialize(io = nil, options = self.default_options, context = {})

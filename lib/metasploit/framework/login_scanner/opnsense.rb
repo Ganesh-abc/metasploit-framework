@@ -74,7 +74,7 @@ module Metasploit
         # Each login attempt also requires specific cookies to be set, otherwise an error is returned.
         #
         # @param username Username
-        # @param password Password
+        # @param [Object] password Password
         # @param magic_value A hash containing the magic_value name and value
         # @param cookies A cookie string
         def try_login(username, password, magic_value, cookies)

@@ -7,7 +7,7 @@ module Msf::Auxiliary::ManageEngineXnode::BasicChecks
   #
   # @param sock [Socket] Socket to use for the request
   # @param username [String] Username
-  # @param password [String] Password
+  # @param [Object] password [String] Password
   # @return [Array] Array containing a response code (Integer) and a status message (String)
   def xnode_check(sock, username, password)
     res_code, res_msg = xnode_sanity_check(sock)
@@ -46,7 +46,7 @@ module Msf::Auxiliary::ManageEngineXnode::BasicChecks
   #
   # @param sock [Socket] Socket to use for the request
   # @param username [String] Username
-  # @param password [String] Password
+  # @param [Object] password [String] Password
   # @return [Array] Array containing a response code (Integer) and a status message (String)
   def xnode_authenticate(sock, username, password)
     res = send_to_sock(sock, action_authenticate(username, password))

@@ -113,7 +113,7 @@ module Metasploit
 
         validates :wordlist, 'Metasploit::Framework::File_path': true, if: -> { wordlist.present? }
 
-        # @param attributes [Hash{Symbol => String,nil}]
+        # @param [Object] attributes [Hash{Symbol => String,nil}]
         def initialize(attributes = {})
           attributes.each do |attribute, value|
             public_send("#{attribute}=", value)

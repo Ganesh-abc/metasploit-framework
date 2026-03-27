@@ -56,7 +56,7 @@ module Rex
         # @param udp [TrueClass, FalseClass] Listen on UDP socket
         # @param tcp [TrueClass, FalseClass] Listen on TCP socket
         # @param ldif [String] LDIF data
-        # @param auth_provider [Rex::Proto::LDAP::Auth] LDAP Authentication provider which processes authentication
+        # @param [Object] auth_provider [Rex::Proto::LDAP::Auth] LDAP Authentication provider which processes authentication
         # @param ctx [Hash] Framework context for sockets
         # @param dblock [Proc] Handler for :dispatch_request flow control interception
         # @param sblock [Proc] Handler for :send_response flow control interception
@@ -274,7 +274,7 @@ module Rex
         # Search provided ldif data for query information. If no `ldif` was provided a random search result will be generated.
         #
         # @param filter [Net::LDAP::Filter] LDAP query filter
-        # @param attrflt [Array, Symbol] LDAP attribute filter
+        # @param [Object] attrflt [Array, Symbol] LDAP attribute filter
         #
         # @return [Array] Query matches
 

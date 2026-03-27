@@ -8,8 +8,8 @@ module Rex::Crypto::KeyWrap::NIST_SP_800_38f
   # Performs AES key unwrapping from NIST SP 800-38F.
   #
   # @param kek [String] The key-encryption key (KEK) used to unwrap the ciphertext.
-  # @param key_data [String] The wrapped key data.
-  # @param authenticate [Boolean] Whether to check the data integrity or not.
+  # @param [Object] key_data [String] The wrapped key data.
+  # @param [Object] authenticate [Boolean] Whether to check the data integrity or not.
   # @return [String, nil] The unwrapped key on success, or nil if unwrapping fails.
   #
   # @see https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38F.pdf

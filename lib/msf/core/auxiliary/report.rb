@@ -143,7 +143,7 @@ module Auxiliary::Report
 
   #
   # Report a client connection
-  # @param opts [Hash] report client information based on user-agent
+  # @param [Object] opts [Hash] report client information based on user-agent
   # @option opts [String] :host the address of the client connecting
   # @option opts [String] :ua_string a string that uniquely identifies this client
   # @option opts [String] :ua_name a brief identifier for the client, e.g. "Firefox"
@@ -189,7 +189,7 @@ module Auxiliary::Report
   # by a module. This method is deprecated and the new Metasploit::Credential methods
   # should be used directly instead.
   #
-  # @param opts [Hash] the option hash
+  # # @param [Object] opts [Hash] the option hash
   # @option opts [String] :host the address of the host (also takes a Mdm::Host)
   # @option opts [Integer] :port the port of the connected service
   # @option opts [Mdm::Service] :service an optional Service object to build the cred for

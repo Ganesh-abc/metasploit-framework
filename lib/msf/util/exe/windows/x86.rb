@@ -12,7 +12,7 @@ module Msf::Util::EXE::Windows::X86
     # #
     # # @param framework [Msf::Framework] The Metasploit framework instance.
     # # @param code [String] The shellcode to embed in the executable.
-    # # @param opts [Hash] Additional options.
+    # # @param [Object] opts [Hash] Additional options.
     # # @return [String] The constructed PE executable as a binary string.
 
     # def to_win32pe(framework, code, opts = {})
@@ -189,8 +189,8 @@ module Msf::Util::EXE::Windows::X86
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
-    # @param arch       [String] Default is "x86"
+    # # @param [Object] opts       [Hash]
+    # @param [Object] arch       [String] Default is "x86"
     def to_winpe_only(framework, code, opts = {}, arch=ARCH_X86)
 
       # Allow the user to specify their own EXE template
@@ -314,7 +314,7 @@ module Msf::Util::EXE::Windows::X86
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @return           [String]
     def to_win32pe_exe_sub(framework, code, opts = {})
       # Allow the user to specify their own DLL template
@@ -345,7 +345,7 @@ module Msf::Util::EXE::Windows::X86
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :exe_type
     # @option           [String] :dll
     # @option           [String] :inject
@@ -367,7 +367,7 @@ module Msf::Util::EXE::Windows::X86
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # # @param [Object] opts       [Hash]
     # @option           [String] :exe_type
     # @option           [String] :dll
     # @option           [String] :inject

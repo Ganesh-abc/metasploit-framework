@@ -78,7 +78,7 @@ module Metasploit
         #
         # @param out_file [String] The file path to save the binary as.
         # @param c_template [String] The randomized C source code to compile.
-        # @param opts [Hash] Options to pass to #compile_random_c
+        # @param [Object] opts [Hash] Options to pass to #compile_random_c
         # @return [Integer] The number of bytes written.
         def self.compile_random_c_to_file(out_file, c_template, opts={})
           pe = self.compile_random_c(c_template, opts)

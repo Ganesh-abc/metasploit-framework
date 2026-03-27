@@ -15,7 +15,7 @@ module Common
   #
   # @note This modifies +host_ranges+ in place
   #
-  # @param arg [String] The thing to turn into a RangeWalker
+  # @param [Object] arg [String] The thing to turn into a RangeWalker
   # @param host_ranges [Array] The array of ranges to append
   # @param required [Boolean] Whether an empty +arg+ should be an error
   # @return [Boolean] true if parsing was successful or false otherwise

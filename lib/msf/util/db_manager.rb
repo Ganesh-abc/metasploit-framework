@@ -3,7 +3,7 @@ module Util
 module DBManager
   # Creates search conditions to match the specified search string against all of the model's columns.
   #
-  # @param model - An ActiveRecord model object
+  # @param [Object] model - An ActiveRecord model object
   # @param search - A string regex search
   # @param column_name_skip_list - An array of strings containing column names to skip
   # @return Arel::Nodes::Or object that represents a search of all of the model's columns

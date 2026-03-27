@@ -12,7 +12,7 @@
     #
     # @param framework  [Msf::Framework]  The framework of you want to use
     # @param code       [String]
-    # @param opts       [Hash]
+    # @param [Object] opts       [Hash]
     # @option           [String] :template
     # @return           [String]
     def to_osx_ppc_macho(framework, code, opts = {})
