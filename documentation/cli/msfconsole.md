@@ -60,5 +60,3 @@ This file is commonly used for global configurations such as:
 * `setg verbose true` - Enables detailed output by default.
 * `workspace <name>` - Sets a default project workspace.
 
-> [!NOTE]
-> If you need to skip the execution of this automatic script, launch the console with the `-y` flag: `msfconsole -y`.
