@@ -198,7 +198,9 @@ class Core
     "Core"
   end
 
-
+  #
+  # Displays help for the color command.
+  #
   def cmd_color_help
     print_line "Usage: color <'true'|'false'|'auto'>"
     print_line
@@ -231,7 +233,9 @@ class Core
     return [] if words.length > 1
     %w[auto true false]
   end
-
+  #
+  # Displays help for the cd command.
+  #
   def cmd_cd_help
     print_line "Usage: cd <directory>"
     print_line
@@ -313,7 +317,9 @@ class Core
 
     []
   end
-
+  #
+  # Displays useful Metasploit tips and tricks.
+  #
   def cmd_tips_help
     print_line "Usage: tips [options]"
     print_line
