@@ -7,6 +7,7 @@ module Msf
       module CommandDispatcher
 
         #
+        #
         # {CommandDispatcher} for commands related to background jobs in Metasploit Framework.
         #
         class Modules
