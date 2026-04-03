@@ -16,14 +16,13 @@ require 'optparse'
 module Msf
 module Ui
 module Console
+#
+# Core command dispatcher for general framework commands and session interaction.
+#
 module CommandDispatcher
-
-###
 #
-# Command dispatcher for core framework commands, such as module loading,
-# session interaction, and other general things.
+# Core command dispatcher for general framework commands and session interaction.
 #
-###
 class Core
 
   include Msf::Ui::Console::CommandDispatcher
