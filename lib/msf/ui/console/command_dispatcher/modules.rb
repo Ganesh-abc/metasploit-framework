@@ -159,6 +159,8 @@ module Msf
           #
           # Displays information about one or more module.
           #
+          # @param args [Array<String>] The module names and display options.
+          # @return [void]
           def cmd_info(*args)
             dump_json = false
             show_doc = false
