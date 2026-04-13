@@ -201,6 +201,7 @@ class Core
   #
   # Displays help for the color command.
   #
+  # @return [void]
   def cmd_color_help
     print_line "Usage: color <'true'|'false'|'auto'>"
     print_line
@@ -227,8 +228,7 @@ class Core
   #
   # @param str [String] the string currently being typed before tab was hit
   # @param words [Array<String>] the previously completed words on the command line.  words is always
-  # at least 1 when tab completion has reached this stage since the command itself has been completed
-  #
+  # @return [Array<String>] List of possible completions (auto, true, false).
   def cmd_color_tabs(str, words)
     return [] if words.length > 1
     %w[auto true false]
@@ -246,6 +246,8 @@ class Core
   #
   # Change the current working directory
   #
+  # @param args [Array<String>] The directory path to change to.
+  # @return [void]
   def cmd_cd(*args)
     if(args.length == 0)
       print_error("No path specified")
